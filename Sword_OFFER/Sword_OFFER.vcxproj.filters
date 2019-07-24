@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\递归算法思考">
+      <UniqueIdentifier>{93a8a344-c009-43ef-961a-69700e3d2244}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="面试题2—单例Singleton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题2—单例Singleton拓展.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题3—数组中重复的数字.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题4—二维数组中的查找.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题5—替换空格.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题6前置—双向链表的实现.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题6—从尾到头打印链表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题7前置—二叉树的数据结构实现.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="自主面试题1—N个数的全排列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题7—重建二叉树.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="自主面试题2—二叉排序树的恢复.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="递归算法概述.cpp">
+      <Filter>源文件\递归算法思考</Filter>
+    </ClCompile>
+    <ClCompile Include="阶乘实现.cpp">
+      <Filter>源文件\递归算法思考</Filter>
+    </ClCompile>
+    <ClCompile Include="斐波拉切数列实现.cpp">
+      <Filter>源文件\递归算法思考</Filter>
+    </ClCompile>
+    <ClCompile Include="杨辉三角形的取值.cpp">
+      <Filter>源文件\递归算法思考</Filter>
+    </ClCompile>
+    <ClCompile Include="回文字符串判断.cpp">
+      <Filter>源文件\递归算法思考</Filter>
+    </ClCompile>
+    <ClCompile Include="给定数字的全排列问题.cpp">
+      <Filter>源文件\递归算法思考</Filter>
+    </ClCompile>
+    <ClCompile Include="前n位依次被n整除.cpp">
+      <Filter>源文件\递归算法思考</Filter>
+    </ClCompile>
+    <ClCompile Include="虚继承的sizeof思考.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题8—二叉树的下一个节点.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题9—用两个栈实现队列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题10—斐波那契数列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题11前置—查找与快排.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题11—旋转数组中的最小数字.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题12—矩阵中的路径.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

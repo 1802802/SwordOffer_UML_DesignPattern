@@ -13,5 +13,100 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\创建型模式">
+      <UniqueIdentifier>{d9fa292d-b8f3-4fef-9dad-04250088e073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\结构型模式">
+      <UniqueIdentifier>{c742cb3d-44fe-4f6f-8db7-8238685dbea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\行为型模式">
+      <UniqueIdentifier>{921c3b2e-e5d2-4bd0-8419-dee9e6f22457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\测试题">
+      <UniqueIdentifier>{8911da36-625a-422a-90a7-f01fa0659462}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>源文件\创建型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="简单工厂模式.cpp">
+      <Filter>源文件\创建型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="工厂模式.cpp">
+      <Filter>源文件\创建型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="抽象工厂模式.cpp">
+      <Filter>源文件\创建型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="建造者模式.cpp">
+      <Filter>源文件\创建型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="原型模式.cpp">
+      <Filter>源文件\创建型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="抽象型建造者模式.cpp">
+      <Filter>源文件\创建型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="代理模式.cpp">
+      <Filter>源文件\结构型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="装饰模式.cpp">
+      <Filter>源文件\结构型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="适配器模式.cpp">
+      <Filter>源文件\结构型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="桥接模式.cpp">
+      <Filter>源文件\结构型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="组合模式.cpp">
+      <Filter>源文件\结构型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="外观模式.cpp">
+      <Filter>源文件\结构型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="享元模式.cpp">
+      <Filter>源文件\结构型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="模板模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="命令模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="责任链模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="策略模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="中介者模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="观察者模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="备忘录模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="访问者模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="状态模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="解释模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="迭代器模式.cpp">
+      <Filter>源文件\行为型模式</Filter>
+    </ClCompile>
+    <ClCompile Include="字符串查找.cpp">
+      <Filter>源文件\测试题</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>源文件\测试题</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,0 +1,3 @@
+"D:\Program Files\Notepad++\notepad++.exe"
+"C:\Program Files\UrgBenriPlus\UrgBenriPlus.exe"
+"E:\Users\杨梓桐\桌面的软件\PanDownload_v2.0.6\PanDownload\PanDownload.exe"

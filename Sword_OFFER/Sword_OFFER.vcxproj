@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FD896D24-E8A3-4AE8-9A57-0A2774C569D3}</ProjectGuid>
-    <RootNamespace>UML_And_DesignPattern</RootNamespace>
+    <ProjectGuid>{68ECCA4A-DA72-43BB-A1CA-0913AE96DDEB}</ProjectGuid>
+    <RootNamespace>Sword_OFFER</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -85,6 +85,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -113,33 +116,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Singleton.cpp" />
-    <ClCompile Include="Test.cpp" />
-    <ClCompile Include="字符串查找.cpp" />
-    <ClCompile Include="中介者模式.cpp" />
-    <ClCompile Include="享元模式.cpp" />
-    <ClCompile Include="代理模式.cpp" />
-    <ClCompile Include="原型模式.cpp" />
-    <ClCompile Include="命令模式.cpp" />
-    <ClCompile Include="备忘录模式.cpp" />
-    <ClCompile Include="外观模式.cpp" />
-    <ClCompile Include="工厂模式.cpp" />
-    <ClCompile Include="建造者模式.cpp" />
-    <ClCompile Include="抽象型建造者模式.cpp" />
-    <ClCompile Include="抽象工厂模式.cpp" />
-    <ClCompile Include="桥接模式.cpp" />
-    <ClCompile Include="模板模式.cpp" />
-    <ClCompile Include="状态模式.cpp" />
-    <ClCompile Include="策略模式.cpp" />
-    <ClCompile Include="简单工厂模式.cpp" />
-    <ClCompile Include="组合模式.cpp" />
-    <ClCompile Include="装饰模式.cpp" />
-    <ClCompile Include="观察者模式.cpp" />
-    <ClCompile Include="解释模式.cpp" />
-    <ClCompile Include="访问者模式.cpp" />
-    <ClCompile Include="责任链模式.cpp" />
-    <ClCompile Include="迭代器模式.cpp" />
-    <ClCompile Include="适配器模式.cpp" />
+    <ClCompile Include="前n位依次被n整除.cpp" />
+    <ClCompile Include="回文字符串判断.cpp" />
+    <ClCompile Include="给定数字的全排列问题.cpp" />
+    <ClCompile Include="斐波拉切数列实现.cpp" />
+    <ClCompile Include="杨辉三角形的取值.cpp" />
+    <ClCompile Include="自主面试题1—N个数的全排列.cpp" />
+    <ClCompile Include="自主面试题2—二叉排序树的恢复.cpp" />
+    <ClCompile Include="虚继承的sizeof思考.cpp" />
+    <ClCompile Include="递归算法概述.cpp" />
+    <ClCompile Include="阶乘实现.cpp" />
+    <ClCompile Include="面试题10—斐波那契数列.cpp" />
+    <ClCompile Include="面试题11—旋转数组中的最小数字.cpp" />
+    <ClCompile Include="面试题11前置—查找与快排.cpp" />
+    <ClCompile Include="面试题12—矩阵中的路径.cpp" />
+    <ClCompile Include="面试题2—单例Singleton.cpp" />
+    <ClCompile Include="面试题2—单例Singleton拓展.cpp" />
+    <ClCompile Include="面试题3—数组中重复的数字.cpp" />
+    <ClCompile Include="面试题4—二维数组中的查找.cpp" />
+    <ClCompile Include="面试题5—替换空格.cpp" />
+    <ClCompile Include="面试题6—从尾到头打印链表.cpp" />
+    <ClCompile Include="面试题6前置—双向链表的实现.cpp" />
+    <ClCompile Include="面试题7—重建二叉树.cpp" />
+    <ClCompile Include="面试题7前置—二叉树的数据结构实现.cpp" />
+    <ClCompile Include="面试题8—二叉树的下一个节点.cpp" />
+    <ClCompile Include="面试题9—用两个栈实现队列.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
