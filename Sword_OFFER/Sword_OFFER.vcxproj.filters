@@ -102,5 +102,14 @@
     <ClCompile Include="面试题15—二进制中1的个数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="面试题16—数值的整数次方.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题17—打印从1到最大的n位数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题18—删除链表的节点.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

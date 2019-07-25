@@ -52,7 +52,7 @@ static void Test(int number, unsigned int expected)
 	printf("\n");
 }
 
-int main(int argc, char* argv[])
+int main_offer15(int argc, char* argv[])
 {
 	// 输入0，期待的输出是0
 	Test(0, 0);
@@ -71,6 +71,9 @@ int main(int argc, char* argv[])
 
 	// 输入0x80000000（负数），期待的输出是1
 	Test(0x80000000, 1);
+
+	cout << (int)0x80000000 << endl;
+	cout << (int)0xFFFFFFFF << endl;
 
 	return 0;
 }

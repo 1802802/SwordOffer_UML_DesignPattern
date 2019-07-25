@@ -133,6 +133,9 @@
     <ClCompile Include="面试题13—机器人运动范围.cpp" />
     <ClCompile Include="面试题14—剪绳子.cpp" />
     <ClCompile Include="面试题15—二进制中1的个数.cpp" />
+    <ClCompile Include="面试题16—数值的整数次方.cpp" />
+    <ClCompile Include="面试题17—打印从1到最大的n位数.cpp" />
+    <ClCompile Include="面试题18—删除链表的节点.cpp" />
     <ClCompile Include="面试题2—单例Singleton.cpp" />
     <ClCompile Include="面试题2—单例Singleton拓展.cpp" />
     <ClCompile Include="面试题3—数组中重复的数字.cpp" />
