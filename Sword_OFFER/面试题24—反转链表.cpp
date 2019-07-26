@@ -2,6 +2,7 @@
 // 题目：输入一个链表，反转链表后，输出新链表的表头。
 
 #include <iostream>
+#include <string>
 #include "List.h"
 using namespace std;
 
@@ -25,3 +26,14 @@ public:
 		}
 	}
 };
+
+int main_offer24()
+{
+	string a;
+	string b;
+	string c;
+	while (cin >> a >> b >> c)
+		cout << a << " " << b << " " << c << endl;
+
+	return 0;
+}
