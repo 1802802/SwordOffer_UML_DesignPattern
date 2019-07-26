@@ -16,6 +16,9 @@
     <Filter Include="源文件\递归算法思考">
       <UniqueIdentifier>{93a8a344-c009-43ef-961a-69700e3d2244}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\数据结构代码">
+      <UniqueIdentifier>{fbce0d73-226b-4868-b6cf-4222bd67e19f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="面试题2—单例Singleton.cpp">
@@ -108,8 +111,37 @@
     <ClCompile Include="面试题17—打印从1到最大的n位数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="面试题18—删除链表的节点.cpp">
+    <ClCompile Include="面试题18.1—删除链表的节点.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="面试题18.2—删除链表中的重复节点.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题19—正则表达式匹配.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题20—表示数值的字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题21—调整数组顺序使奇数位于偶数前面.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题22—链表中倒数第k个节点.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题23—链表中环的入口结点.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题24—反转链表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="List.h">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
