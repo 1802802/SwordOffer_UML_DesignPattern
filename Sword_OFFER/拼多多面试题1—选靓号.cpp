@@ -15,7 +15,7 @@
 #include<string>
 using namespace std;
 
-int main()
+int main_pinduoduo2019_1()
 {
 	double N, K;
 	string phoneNumber;

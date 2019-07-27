@@ -11,10 +11,14 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 // 作者：何海涛
 //==================================================================
 
+#include <iostream>
+
 struct ListNode
 {
 	int       m_nValue;
 	ListNode* m_pNext;
+	ListNode() {}
+	ListNode(int x) : m_nValue(x), m_pNext(NULL) {}
 };
 
 __declspec(dllexport) ListNode* CreateListNode(int value);

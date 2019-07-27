@@ -116,6 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="前n位依次被n整除.cpp" />
     <ClCompile Include="回文字符串判断.cpp" />
@@ -145,6 +146,11 @@
     <ClCompile Include="面试题22—链表中倒数第k个节点.cpp" />
     <ClCompile Include="面试题23—链表中环的入口结点.cpp" />
     <ClCompile Include="面试题24—反转链表.cpp" />
+    <ClCompile Include="面试题25—合并两个排序的链表.cpp" />
+    <ClCompile Include="面试题26—树的子结构.cpp" />
+    <ClCompile Include="面试题27—二叉树的镜像.cpp" />
+    <ClCompile Include="面试题28—对称的二叉树.cpp" />
+    <ClCompile Include="面试题29—顺指针打印矩阵.cpp" />
     <ClCompile Include="面试题2—单例Singleton.cpp" />
     <ClCompile Include="面试题2—单例Singleton拓展.cpp" />
     <ClCompile Include="面试题3—数组中重复的数字.cpp" />
@@ -158,6 +164,7 @@
     <ClCompile Include="面试题9—用两个栈实现队列.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="List.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
