@@ -160,6 +160,8 @@
     <ClCompile Include="面试题29—顺指针打印矩阵.cpp" />
     <ClCompile Include="面试题2—单例Singleton.cpp" />
     <ClCompile Include="面试题2—单例Singleton拓展.cpp" />
+    <ClCompile Include="面试题30—包含min函数的栈.cpp" />
+    <ClCompile Include="面试题31—栈的压入、弹出序列.cpp" />
     <ClCompile Include="面试题3—数组中重复的数字.cpp" />
     <ClCompile Include="面试题4—二维数组中的查找.cpp" />
     <ClCompile Include="面试题5—替换空格.cpp" />
