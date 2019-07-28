@@ -165,6 +165,27 @@
     <ClCompile Include="面试题29—顺指针打印矩阵.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
+    <ClCompile Include="拼多多面试题2—种树.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多面试题3—两两配对差值最小.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多面试题4—回合制游戏.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多2020面试题1—.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多2020面试题3—.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多2020面试题2—.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多2020面试题4—.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

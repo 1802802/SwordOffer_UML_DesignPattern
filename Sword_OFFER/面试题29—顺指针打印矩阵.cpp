@@ -93,7 +93,7 @@ void Test(int columns, int rows)
 	printf("\n");
 }
 
-int main(int argc, char* argv[])
+int main_offer29(int argc, char* argv[])
 {
 	/*
 	1

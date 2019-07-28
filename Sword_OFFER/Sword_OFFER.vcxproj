@@ -120,7 +120,14 @@
     <ClCompile Include="List.cpp" />
     <ClCompile Include="前n位依次被n整除.cpp" />
     <ClCompile Include="回文字符串判断.cpp" />
+    <ClCompile Include="拼多多2020面试题1—.cpp" />
+    <ClCompile Include="拼多多2020面试题3—.cpp" />
+    <ClCompile Include="拼多多2020面试题4—.cpp" />
     <ClCompile Include="拼多多面试题1—选靓号.cpp" />
+    <ClCompile Include="拼多多2020面试题2—.cpp" />
+    <ClCompile Include="拼多多面试题2—种树.cpp" />
+    <ClCompile Include="拼多多面试题3—两两配对差值最小.cpp" />
+    <ClCompile Include="拼多多面试题4—回合制游戏.cpp" />
     <ClCompile Include="给定数字的全排列问题.cpp" />
     <ClCompile Include="斐波拉切数列实现.cpp" />
     <ClCompile Include="杨辉三角形的取值.cpp" />
