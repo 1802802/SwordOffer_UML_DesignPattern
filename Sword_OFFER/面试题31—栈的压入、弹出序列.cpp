@@ -117,7 +117,7 @@ static void Test7()
 	Test("Test7", vector<int>(), vector<int>(), 0, false);
 }				 
 
-int main(int argc, char* argv[])
+int main_offer31(int argc, char* argv[])
 {
 	Test1();
 	Test2();
