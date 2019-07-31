@@ -36,7 +36,7 @@ public:
 		int start = 0; int end = numbers.size() - 1;
 		//找轴点
 		int index = Partition(numbers, start, end);
-		//直到轴点和中位点位置相同，跳出
+		//直到轴点和中位点位置相同，跳出（将轴点不断地逼近middle中位点）
 		while (index != middle)
 		{
 			if (index > middle)
