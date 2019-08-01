@@ -8,7 +8,6 @@
 #include <string>
 using namespace std;
 
-
 class Solution 
 {
 public:
@@ -78,7 +77,7 @@ public:
 		return start;
 	}
 
-	//3.采用最大堆存取数据（思路可以，但是有错，应该是对堆的使用不当）
+	//3.采用最大堆存取数据，运行时间：3ms，占用内存：476k
 	vector<int> GetLeastNumbers_Solution3(vector<int>& input, int k)
 	{
 		if (input.size() < 1)
@@ -90,7 +89,8 @@ public:
 		for (int i = 0; i < k; i++)
 		{
 			tmp.push_back(input[0]);
-			pop_heap(input.begin(), input.end());
+			pop_heap(input.begin(), input.end(), [](int a, int b) {return a > b; });
+			input.pop_back();   //pop_heap之后要pop_back，push_back之后要push_heap
 		}
 		return tmp;
 	}
@@ -155,7 +155,7 @@ static void Test(char* testName, int* data, int n, int* expectedResult, int k)
 
 	printf("Result for solution1:\n");
 	Solution s;
-	vector<int> a = s.GetLeastNumbers_Solution4(vectorData, k);
+	vector<int> a = s.GetLeastNumbers_Solution3(vectorData, k);
 	if (expectedResult != nullptr)
 	{
 		for (int i = 0; i < a.size(); ++i)
@@ -219,7 +219,7 @@ static void Test7()
 	Test("Test7", nullptr, 0, expected, 0);
 }
 
-int main(int argc, char* argv[])
+int main_offer40(int argc, char* argv[])
 {
 	Test1();
 	Test2();
