@@ -12,7 +12,13 @@ using namespace std;
 class Solution 
 {
 public:
-	//思路：将vector中的所有数变为字符串，然后将其排序为最小的即可（其中要自定义一下比较函数）
+	//思路：将vector中的所有数变为字符串，然后将其排序为最小的即可（其中要自定义一下比较函数），运行时间：4ms，占用内存：480k
+
+	//本题关键：自定义比较函数的实现：（注意返回的东西是true和false）（其中特别注意：comparator(x,x)必须返回false，因为此时a<b不成立而b<a也不成立）
+	//自定义比较函数需要注意的有：不要用<=之类的符号,会导致comparator失效
+	//C++关联容器的有序容器对元素关键字的类型有要求，元素关键字的类型必须定义了严格弱序（stick weak ordering） 
+	//拿内置类型来说，C++都定义了 “<”操作符，这就是一个严格弱序，而“ <= ”就不是一个严格弱序
+
 	string PrintMinNumber(vector<int> numbers) 
 	{
 		string input = "";
@@ -27,64 +33,22 @@ public:
 		return input;
 	}
 
+	//自定义比较函数需要注意的有：不要用<=之类的符号,会导致comparator失效
+	//C++关联容器的有序容器对元素关键字的类型有要求，元素关键字的类型必须定义了严格弱序（stick weak ordering） 
+	//拿内置类型来说，C++都定义了 “<”操作符，这就是一个严格弱序，而“ <= ”就不是一个严格弱序
 	static bool compareString(const string& a, const string& b)
 	{
-		string tma = a;
-		tma.append(b.begin(), b.end());
-		string tmb = b;
-		tmb.append(a.begin(), a.end());
+		string tma = a + b;
+		string tmb = b + a;
+		if (tma == tmb)
+			return false;
 		for (int i = 0; i < tma.size(); i++)
 		{
-			if (tma[i] > b[i])
-				return a > b;
-			else if (tma[i] < b[i])
-				return a < b;
+			if (tma[i] < tmb[i])
+				return true;
+			else if(tma[i] > tmb[i])
+				return false;
 		}
-		return a > b;
-	}
-
-	static bool CompareString(const string& a, const string& b)
-	{	
-		if (a.size() >= b.size())
-		{
-			int maxSize = a.size();
-			int minSize = b.size();
-			for (int i = 0; i < minSize; i++)
-			{
-				if (a[i] > b[i])
-					return a > b;
-				else if (a[i] < b[i])
-					return a < b;
-			}
-			for (int i = minSize, j = 0; i < maxSize; i++, j++)
-			{
-				if (a[i] > b[j])
-					return a > b;
-				else if (a[i] < b[j])
-					return a < b;
-			}
-			return a > b;
-		}
-		else
-		{
-			int maxSize = b.size();
-			int minSize = a.size();
-			for (int i = 0; i < minSize; i++)
-			{
-				if (a[i] > b[i])
-					return a > b;
-				else if (a[i] < b[i])
-					return a < b;
-			}
-			for (int i = minSize, j = 0; i < maxSize; i++, j++)
-			{
-				if (a[j] > b[i])
-					return a > b;
-				else if (a[j] < b[i])
-					return a < b;
-			}
-		}
-		return a > b;
 	}
 };
 
