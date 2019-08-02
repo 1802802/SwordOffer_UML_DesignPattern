@@ -243,6 +243,18 @@
     <ClCompile Include="面试题45—把数组排成最小的数.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
+    <ClCompile Include="面试题46—把数字翻译成字符串.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题47—礼物的最大价值.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题48—最长不含重复字符的子字符串.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题49—丑数.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

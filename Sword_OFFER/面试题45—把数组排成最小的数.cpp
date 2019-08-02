@@ -105,7 +105,7 @@ static void Test6()
 }
 
 
-int main(int argc, char* argv[])
+int main_offer45(int argc, char* argv[])
 {
 	Test1();
 	Test2();
