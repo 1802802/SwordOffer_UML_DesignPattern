@@ -255,6 +255,21 @@
     <ClCompile Include="面试题49—丑数.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
+    <ClCompile Include="面试题50.1—第一个只出现一次的字符.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题50.2—字符流中第一个只出现一次的字符.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题51—数组中的逆序对%28归并排序%29.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题52—两个链表的一个公共节点.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题53—在排序数组中查找数字.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

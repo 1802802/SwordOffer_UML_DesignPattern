@@ -185,6 +185,11 @@
     <ClCompile Include="面试题48—最长不含重复字符的子字符串.cpp" />
     <ClCompile Include="面试题49—丑数.cpp" />
     <ClCompile Include="面试题4—二维数组中的查找.cpp" />
+    <ClCompile Include="面试题50.1—第一个只出现一次的字符.cpp" />
+    <ClCompile Include="面试题50.2—字符流中第一个只出现一次的字符.cpp" />
+    <ClCompile Include="面试题51—数组中的逆序对%28归并排序%29.cpp" />
+    <ClCompile Include="面试题52—两个链表的一个公共节点.cpp" />
+    <ClCompile Include="面试题53—在排序数组中查找数字.cpp" />
     <ClCompile Include="面试题5—替换空格.cpp" />
     <ClCompile Include="面试题6—从尾到头打印链表.cpp" />
     <ClCompile Include="面试题6前置—双向链表的实现.cpp" />
