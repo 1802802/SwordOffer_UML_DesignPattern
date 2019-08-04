@@ -25,6 +25,9 @@
     <Filter Include="源文件\各种自主面试题">
       <UniqueIdentifier>{56138320-579c-40a3-a8a6-052860c8164b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Leecode题目记录">
+      <UniqueIdentifier>{fe035bd4-b2f0-4662-9264-b77a79d9508e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="递归算法概述.cpp">
@@ -269,6 +272,24 @@
     </ClCompile>
     <ClCompile Include="面试题53—在排序数组中查找数字.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="第207题 课程表（拓扑排序）.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="第210题 课程表 II（拓扑排序）.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="课程表问题拓展—正着写与最佳路径实现.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="大疆2020笔试题1.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="大疆2020笔试题2.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="大疆笔试题3.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

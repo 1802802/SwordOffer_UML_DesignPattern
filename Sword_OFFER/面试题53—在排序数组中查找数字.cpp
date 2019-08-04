@@ -172,7 +172,7 @@ static void Test11()
 	Test("Test11", vector<int>(), 0, 0, 0);
 }
 
-int main(int argc, char* argv[])
+int main_offer53(int argc, char* argv[])
 {
 	Test1();
 	Test2();
