@@ -6,7 +6,7 @@
 #include <map>
 using namespace std;
 
-int main()
+int main_dajiang2()
 {
 	int N, T;
 	while (cin >> N >> T)

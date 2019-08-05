@@ -122,7 +122,7 @@
     <ClCompile Include="回文字符串判断.cpp" />
     <ClCompile Include="大疆2020笔试题1.cpp" />
     <ClCompile Include="大疆2020笔试题2.cpp" />
-    <ClCompile Include="大疆笔试题3.cpp" />
+    <ClCompile Include="大疆2020笔试题3.cpp" />
     <ClCompile Include="拼多多2020面试题1—.cpp" />
     <ClCompile Include="拼多多2020面试题3—.cpp" />
     <ClCompile Include="拼多多2020面试题4—.cpp" />
@@ -195,7 +195,16 @@
     <ClCompile Include="面试题50.2—字符流中第一个只出现一次的字符.cpp" />
     <ClCompile Include="面试题51—数组中的逆序对%28归并排序%29.cpp" />
     <ClCompile Include="面试题52—两个链表的一个公共节点.cpp" />
-    <ClCompile Include="面试题53—在排序数组中查找数字.cpp" />
+    <ClCompile Include="面试题53.2—0到n-1中缺失的数字.cpp" />
+    <ClCompile Include="面试题53.1—在排序数组中查找数字.cpp" />
+    <ClCompile Include="面试题53.3—数组中数值和下标相等的元素.cpp" />
+    <ClCompile Include="面试题54—二叉搜索树的第K大节点.cpp" />
+    <ClCompile Include="面试题55.1—二叉树的深度.cpp" />
+    <ClCompile Include="面试题55.2—平衡二叉树.cpp" />
+    <ClCompile Include="面试题56.1—数组中数字出现的次数.cpp" />
+    <ClCompile Include="面试题56.2—数组中唯一只出现一次的数字.cpp" />
+    <ClCompile Include="面试题57.2—和为s的连续正数序列.cpp" />
+    <ClCompile Include="面试题57.1—和为s的数字.cpp" />
     <ClCompile Include="面试题5—替换空格.cpp" />
     <ClCompile Include="面试题6—从尾到头打印链表.cpp" />
     <ClCompile Include="面试题6前置—双向链表的实现.cpp" />
