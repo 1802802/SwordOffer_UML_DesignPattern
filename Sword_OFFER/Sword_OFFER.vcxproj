@@ -205,7 +205,13 @@
     <ClCompile Include="面试题56.2—数组中唯一只出现一次的数字.cpp" />
     <ClCompile Include="面试题57.2—和为s的连续正数序列.cpp" />
     <ClCompile Include="面试题57.1—和为s的数字.cpp" />
+    <ClCompile Include="面试题58.1—翻转字符串.cpp" />
+    <ClCompile Include="面试题58.2—左旋转字符串.cpp" />
+    <ClCompile Include="面试题59.1—滑动窗口的最大值.cpp" />
+    <ClCompile Include="面试题59.2—队列的最大值.cpp" />
     <ClCompile Include="面试题5—替换空格.cpp" />
+    <ClCompile Include="面试题60—n个骰子的点数.cpp" />
+    <ClCompile Include="面试题61—扑克牌中的顺子.cpp" />
     <ClCompile Include="面试题6—从尾到头打印链表.cpp" />
     <ClCompile Include="面试题6前置—双向链表的实现.cpp" />
     <ClCompile Include="面试题7—重建二叉树.cpp" />
