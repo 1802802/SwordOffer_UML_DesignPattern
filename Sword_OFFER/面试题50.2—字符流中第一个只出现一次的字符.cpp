@@ -13,7 +13,7 @@ using namespace std;
 class CharStatistics
 {
 public:
-	//思路：用char进行流输入，在每次输入后进行打印（或者用某个容器存储）
+	//思路：用char进行流输入，在每次输入后进行打印（或者用某个容器存储，类似于hash表的存储过程）
 	void FirstAppearingOnce(stringstream& input)
 	{
 		char str;

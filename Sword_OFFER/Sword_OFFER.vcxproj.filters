@@ -336,6 +336,12 @@
     <ClCompile Include="面试题61—扑克牌中的顺子.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
+    <ClCompile Include="面试题62—圆圈中最后剩下的数字.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题63—股票的最大利润.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
