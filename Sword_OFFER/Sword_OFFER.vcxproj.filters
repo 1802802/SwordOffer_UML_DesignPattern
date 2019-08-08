@@ -342,6 +342,12 @@
     <ClCompile Include="面试题63—股票的最大利润.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
+    <ClCompile Include="面试题64—求1到n.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题65—不用加减乘除做加法.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

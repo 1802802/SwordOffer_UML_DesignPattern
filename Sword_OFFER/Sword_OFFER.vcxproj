@@ -214,6 +214,8 @@
     <ClCompile Include="面试题61—扑克牌中的顺子.cpp" />
     <ClCompile Include="面试题62—圆圈中最后剩下的数字.cpp" />
     <ClCompile Include="面试题63—股票的最大利润.cpp" />
+    <ClCompile Include="面试题64—求1到n.cpp" />
+    <ClCompile Include="面试题65—不用加减乘除做加法.cpp" />
     <ClCompile Include="面试题6—从尾到头打印链表.cpp" />
     <ClCompile Include="面试题6前置—双向链表的实现.cpp" />
     <ClCompile Include="面试题7—重建二叉树.cpp" />
