@@ -35,7 +35,7 @@ public:
 所以，可以将异或的值作为当前的值s，而当进位c存在时，将其前移一位，用于和之后的s继续进行^与&运算
 */
 
-	//1.两种加法运算
+	//1.两种加法运算，运行时间：3ms，占用内存：468k
 	int Add(int num1, int num2)
 	{
 		int sum, carry;
@@ -158,7 +158,7 @@ static void Test(int num1, int num2, int expected)
 		printf("%d + %d is %d. FAILED\n", num1, num2, result);
 }
 
-int main(int argc, char* argv[])
+int main_offer65(int argc, char* argv[])
 {
 	Test(1, 2, 3);
 	Test(111, 899, 1010);

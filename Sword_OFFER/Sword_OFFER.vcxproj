@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
+    <ClCompile Include="Tree.cpp" />
     <ClCompile Include="前n位依次被n整除.cpp" />
     <ClCompile Include="回文字符串判断.cpp" />
     <ClCompile Include="大疆2020笔试题1.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="杨辉三角形的取值.cpp" />
     <ClCompile Include="自主面试题1—N个数的全排列.cpp" />
     <ClCompile Include="自主面试题2—二叉排序树的恢复.cpp" />
+    <ClCompile Include="自主面试题3—从1-N的数字里选出M个数字组成一个数组.cpp" />
     <ClCompile Include="虚继承的sizeof思考.cpp" />
     <ClCompile Include="课程表问题拓展—正着写与最佳路径实现.cpp" />
     <ClCompile Include="递归算法概述.cpp" />
@@ -216,6 +218,9 @@
     <ClCompile Include="面试题63—股票的最大利润.cpp" />
     <ClCompile Include="面试题64—求1到n.cpp" />
     <ClCompile Include="面试题65—不用加减乘除做加法.cpp" />
+    <ClCompile Include="面试题66—构建乘积数组.cpp" />
+    <ClCompile Include="面试题67—把字符串转换成整数.cpp" />
+    <ClCompile Include="面试题68—树中两个节点的最低公共祖先.cpp" />
     <ClCompile Include="面试题6—从尾到头打印链表.cpp" />
     <ClCompile Include="面试题6前置—双向链表的实现.cpp" />
     <ClCompile Include="面试题7—重建二叉树.cpp" />
@@ -226,6 +231,7 @@
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="Tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

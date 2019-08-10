@@ -27,6 +27,7 @@ public:
 	void travPre_Circulate(BinaryTreeNode<T>* node);
 	void travMid_Circulate(BinaryTreeNode<T>* node);
 	void travPos_Circulate(BinaryTreeNode<T>* node);
+	void insert(BinaryTreeNode* &root, int x);
 	int m_size;
 	void updateHeight(BinaryTreeNode<T>* node);
 	BinaryTree() : m_size(0), m_root(NULL) {};

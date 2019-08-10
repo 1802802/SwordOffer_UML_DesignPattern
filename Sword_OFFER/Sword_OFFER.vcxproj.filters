@@ -348,12 +348,30 @@
     <ClCompile Include="面试题65—不用加减乘除做加法.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
+    <ClCompile Include="面试题66—构建乘积数组.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题67—把字符串转换成整数.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="自主面试题3—从1-N的数字里选出M个数字组成一个数组.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="面试题68—树中两个节点的最低公共祖先.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
       <Filter>源文件\数据结构代码</Filter>
     </ClInclude>
     <ClInclude Include="BinaryTree.h">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
       <Filter>源文件\数据结构代码</Filter>
     </ClInclude>
   </ItemGroup>
