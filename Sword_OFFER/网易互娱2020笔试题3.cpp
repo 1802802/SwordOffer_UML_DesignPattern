@@ -149,3 +149,54 @@ int main_wangyi333()
 	}
 	return 0;
 }
+
+
+//第三题AC代码
+//思想为双指针加上动态窗口的思想
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main() 
+{
+	int T;
+	cin >> T;
+	string s;
+	while (T--)
+	{
+		cin >> s;
+		int len = s.size();
+		//i为前指针，j为后指针，flag为修改次数
+		int flag = 2, i = 0, j = 0, ans = 0;
+		while (j < len)
+		{
+			if (s[j] == 'N')   
+				j++;
+			else 
+			{
+				if (flag > 0)
+				{ 
+					flag--; j++; 
+				}
+				else
+				{
+					ans = max(ans, j - i);
+					//当当前j补位N且修改次数用完时，记录当前窗口大小，并前移i直到其释放一个flag后j继续向前
+					while (flag == 0)
+					{
+						if (s[i] == 'N')   
+							i++;
+						else 
+						{ 
+							i++; flag++; break; 
+						}
+					}
+				}
+			}
+		}
+		//记住结束时也要处理一下
+		ans = max(ans, j - i);
+		cout << ans << endl;
+	}
+	return 0;
+}

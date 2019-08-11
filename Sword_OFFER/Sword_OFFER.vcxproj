@@ -124,6 +124,10 @@
     <ClCompile Include="大疆2020笔试题1.cpp" />
     <ClCompile Include="大疆2020笔试题2.cpp" />
     <ClCompile Include="大疆2020笔试题3.cpp" />
+    <ClCompile Include="字节跳动2020笔试题1.cpp" />
+    <ClCompile Include="字节跳动2020笔试题2.cpp" />
+    <ClCompile Include="字节跳动2020笔试题3.cpp" />
+    <ClCompile Include="字节跳动2020笔试题4.cpp" />
     <ClCompile Include="拼多多2020面试题1—.cpp" />
     <ClCompile Include="拼多多2020面试题3—.cpp" />
     <ClCompile Include="拼多多2020面试题4—.cpp" />

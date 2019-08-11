@@ -381,6 +381,18 @@
     <ClCompile Include="网易互娱2020笔试题4.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
+    <ClCompile Include="字节跳动2020笔试题1.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="字节跳动2020笔试题2.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="字节跳动2020笔试题3.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="字节跳动2020笔试题4.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
