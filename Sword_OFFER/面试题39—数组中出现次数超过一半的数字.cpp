@@ -96,6 +96,7 @@ public:
 	{
 		if (numbers.size() < 1)
 			return 0;
+		int size = numbers.size();
 		int result = numbers[0];
 		int times = 1;
 		//3.1候选点选取
@@ -110,6 +111,9 @@ public:
 				result = numbers[i];
 				times++;
 			}
+			//注意这个伟大的剪枝
+			if (times > (size >> 1))
+				break;
 		}
 		//3.2候选点判断是否当选
 		times = 0;

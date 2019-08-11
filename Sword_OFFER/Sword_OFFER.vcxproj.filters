@@ -363,6 +363,24 @@
     <ClCompile Include="Tree.cpp">
       <Filter>源文件\数据结构代码</Filter>
     </ClCompile>
+    <ClCompile Include="自主面试题4—三种背包问题.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="自主面试题5—最短路径算法.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="网易互娱2020笔试题1.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="网易互娱2020笔试题2.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="网易互娱2020笔试题3.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="网易互娱2020笔试题4.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

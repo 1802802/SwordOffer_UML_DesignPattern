@@ -35,6 +35,29 @@ public:
 	}
 };
 
+//牛客网：运行时间：3ms，占用内存：480k
+class Solution
+{
+public:
+	int save[256] = { 0 };
+	string totalStr;
+	//Insert one char from stringstream
+	void Insert(char ch)
+	{
+		save[ch]++;
+		totalStr += ch;
+	}
+	//return the first appearence once char in current stringstream
+	char FirstAppearingOnce()
+	{
+		for (int i = 0; i < totalStr.size(); i++)
+			if (save[totalStr[i]] == 1)
+				return totalStr[i];
+		return '#';
+	}
+
+};
+
 // ====================测试代码====================
 
 int main_offer50_2(int argc, char* argv[])
