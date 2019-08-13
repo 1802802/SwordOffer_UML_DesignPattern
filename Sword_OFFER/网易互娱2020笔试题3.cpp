@@ -157,7 +157,7 @@ int main_wangyi333()
 #include<cstring>
 using namespace std;
 
-int main() 
+int main_wangyi2020_333() 
 {
 	int T;
 	cin >> T;

@@ -393,6 +393,12 @@
     <ClCompile Include="字节跳动2020笔试题4.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector_Test.cpp">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -402,6 +408,9 @@
       <Filter>源文件\数据结构代码</Filter>
     </ClInclude>
     <ClInclude Include="Tree.h">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
       <Filter>源文件\数据结构代码</Filter>
     </ClInclude>
   </ItemGroup>
