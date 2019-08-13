@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Vector.h"
 
-void main()
+int main_testvector()
 {
 	Vector<int> a(1, 0);
 	a.insert(0, 2);
@@ -16,7 +16,10 @@ void main()
 	a.erase(6);
 	a.erase(4);
 	a.print(0, a.size());
-	a.bubblesort(0, a.size());
+	a.sort();
+	a.print(0, a.size());
+	a.unsort();
 	a.print(0, a.size());
 
+	return 0;
 }

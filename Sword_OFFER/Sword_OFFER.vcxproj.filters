@@ -399,6 +399,9 @@
     <ClCompile Include="Vector_Test.cpp">
       <Filter>源文件\数据结构代码</Filter>
     </ClCompile>
+    <ClCompile Include="第XXX题—整数反转.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

@@ -140,6 +140,7 @@
     <ClCompile Include="拼多多面试题4—回合制游戏.cpp" />
     <ClCompile Include="第207题 课程表（拓扑排序）.cpp" />
     <ClCompile Include="第210题 课程表 II（拓扑排序）.cpp" />
+    <ClCompile Include="第XXX题—整数反转.cpp" />
     <ClCompile Include="给定数字的全排列问题.cpp" />
     <ClCompile Include="斐波拉切数列实现.cpp" />
     <ClCompile Include="杨辉三角形的取值.cpp" />

@@ -1,4 +1,6 @@
 #pragma once
+#include<time.h>
+using namespace std;
 
 template<typename T> class Vector
 {
@@ -201,7 +203,10 @@ template<typename T> void Vector<T>::print(int lo, int hi)
 template<typename T> void Vector<T>::unsort()
 {
 	for (int i = _size; i > 0; i--)
+	{
+		srand((unsigned)time(NULL));
 		swap(_elem[i - 1], _elem[rand() % i]);
+	}
 }
 
 template<typename T> void Vector<T>::sort()
@@ -215,16 +220,16 @@ template<typename T> void Vector<T>::sort(int lo, int hi)
 	switch (n)
 	{
 	case 0: bubblesort(lo, hi); break;
-	case 1:
-	case 2:
-	case 3:
-	case 4:
-	case 5:
-	case 6:
-	case 7:
-	case 8:
-	case 9:
-	default: bubblesort(lo, hi); break;
+	case 1:	break;
+	case 2:	break;
+	case 3:	break;
+	case 4:	break;
+	case 5:	break;
+	case 6:	break;
+	case 7:	break;
+	case 8:	break;
+	case 9: break;
+	default: break;
 	}
 }
 
@@ -236,11 +241,9 @@ template<typename T> void Vector<T>::bubblesort(int lo, int hi)
 		flag = true;
 		for (int i = lo; i < hi - 1; i++)
 		{
-			if (_elem[lo] < _elem[lo + 1])
+			if (_elem[i] > _elem[i + 1])
 			{
-				T temp = _elem[lo];
-				_elem[lo] = _elem[lo + 1];
-				_elem[lo + 1] = temp;
+				swap(_elem[i], _elem[i + 1]);
 				flag = false;
 			}
 		}
