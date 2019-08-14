@@ -25,8 +25,10 @@ public:
 	}
 };
 
-int main()
+int main_leecode7()
 {
 	Solution s;
 	cout << s.reverse(-123) << endl;
+
+	return 0;
 }

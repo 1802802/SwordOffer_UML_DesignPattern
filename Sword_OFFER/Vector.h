@@ -34,7 +34,12 @@ public:
 	void unsort();
 	void sort();
 	void sort(int lo, int hi);
+
 	void bubblesort(int lo, int hi);
+	void mergesort(int lo, int hi);
+	void merge(int lo, int mi, int hi);
+	void insertionsort(int lo, int hi);
+	void selectionsort(int lo, int hi);
 };
 
 #include "Vector.h"
@@ -216,13 +221,14 @@ template<typename T> void Vector<T>::sort()
 
 template<typename T> void Vector<T>::sort(int lo, int hi)
 {
-	int n = rand() % 1;
+	srand((unsigned)time(NULL));
+	int n = 3;
 	switch (n)
 	{
-	case 0: bubblesort(lo, hi); break;
-	case 1:	break;
-	case 2:	break;
-	case 3:	break;
+	case 0: bubblesort(lo, hi); cout << "当前使用bubblesort" << endl; break;
+	case 1:	mergesort(lo, hi); cout << "当前使用mergesort" << endl; break;
+	case 2:	insertionsort(lo, hi); cout << "当前使用insertionsort" << endl; break;
+	case 3:	selectionsort(lo, hi); cout << "当前使用selectionsort" << endl;  break;
 	case 4:	break;
 	case 5:	break;
 	case 6:	break;
@@ -248,5 +254,62 @@ template<typename T> void Vector<T>::bubblesort(int lo, int hi)
 			}
 		}
 		hi--;
+	}
+}
+
+template<typename T> void Vector<T>::mergesort(int lo, int hi)
+{
+	if (hi - lo < 2)
+		return;
+	int mi = (hi + lo) >> 1;
+	mergesort(lo, mi);
+	mergesort(mi, hi);
+	merge(lo, mi, hi);
+}
+
+template<typename T> void Vector<T>::merge(int lo, int mi, int hi)
+{
+	int i1 = 0, i2 = lo, i3 = mi;
+	int *temp = new int[hi - lo];
+
+	while (i2 < mi && i3 < hi)
+	{
+		if (_elem[i2] <= _elem[i3])
+			temp[i1++] = _elem[i2++];
+		else
+			temp[i1++] = _elem[i3++];
+	}
+
+	while (i2 < mi)
+		temp[i1++] = _elem[i2++];
+	while (i3 < hi)
+		temp[i1++] = _elem[i3++];
+
+	for (int i = 0; i < hi - lo; i++)
+		_elem[i + lo] = temp[i];
+
+	delete[] temp;
+}
+
+//特点为不断地将之后的数据插入前缀，只管前缀，不管后缀
+template<typename T> void Vector<T>::insertionsort(int lo, int hi)
+{
+	for (int i = lo + 1, j; i < hi; i++)
+	{
+		for (j = i; j > lo && _elem[j] < _elem[j - 1]; j--)
+			swap(_elem[j], _elem[j - 1]);
+	}
+}
+
+template<typename T> void Vector<T>::selectionsort(int lo, int hi)
+{
+	for (int i = hi - 1, j, max; i > lo; i--)
+	{
+		//判断比当前i位置大的数，有则换，没有则不换，无论换不换i都递减
+		for (j = lo, max = i; j <= i; j++)
+			if (_elem[j] > _elem[max])
+				max = j;
+		if (i != max)
+			swap(_elem[i], _elem[max]);
 	}
 }
