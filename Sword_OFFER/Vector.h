@@ -1,5 +1,7 @@
 #pragma once
 #include<time.h>
+#include <vector>
+#include <queue>
 using namespace std;
 
 template<typename T> class Vector
@@ -40,6 +42,9 @@ public:
 	void merge(int lo, int mi, int hi);
 	void insertionsort(int lo, int hi);
 	void selectionsort(int lo, int hi);
+	void countingsort(int lo, int hi);
+	void bucketsort(int lo, int hi);
+	void radixsort(int lo, int hi);
 };
 
 #include "Vector.h"
@@ -222,16 +227,16 @@ template<typename T> void Vector<T>::sort()
 template<typename T> void Vector<T>::sort(int lo, int hi)
 {
 	srand((unsigned)time(NULL));
-	int n = 3;
+	int n = 6;
 	switch (n)
 	{
 	case 0: bubblesort(lo, hi); cout << "当前使用bubblesort" << endl; break;
 	case 1:	mergesort(lo, hi); cout << "当前使用mergesort" << endl; break;
 	case 2:	insertionsort(lo, hi); cout << "当前使用insertionsort" << endl; break;
 	case 3:	selectionsort(lo, hi); cout << "当前使用selectionsort" << endl;  break;
-	case 4:	break;
-	case 5:	break;
-	case 6:	break;
+	case 4:	countingsort(lo, hi) ; cout << "当前使用countingsort" << endl; break;
+	case 5:	bucketsort(lo, hi); cout << "当前使用bucketsort" << endl; break;
+	case 6:	radixsort(lo, hi); cout << "当前使用radixsort" << endl;  break;
 	case 7:	break;
 	case 8:	break;
 	case 9: break;
@@ -312,4 +317,87 @@ template<typename T> void Vector<T>::selectionsort(int lo, int hi)
 		if (i != max)
 			swap(_elem[i], _elem[max]);
 	}
+}
+
+//这里其实为计数排序，实现的是对所有出现的数进行出现次数的计数过程
+//（可见计数排序为一种特殊的桶排序，当桶的个数最大的时候，也就是一个数对一个桶，就是计数排序）
+template<typename T> void Vector<T>::countingsort(int lo, int hi)
+{
+	int largest = _elem[lo];
+	int minest = _elem[lo];
+	for (int i = lo; i < hi; i++)
+	{
+		if (_elem[i] > largest)
+			largest = _elem[i];
+		if (_elem[i] < minest)
+			minest = _elem[i];
+	}
+	int size = largest - minest + 1;
+	int *bucket = new int[size];
+	for (int i = 0; i < size; i++)
+		bucket[i] = 0;
+	for (int i = lo; i < hi; i++)
+		bucket[_elem[i] - minest]++;
+	for (int i = 0; i < size;)
+	{
+		if (bucket[i]-- > 0)
+			_elem[lo++] = i + minest;
+		else
+			i++;
+	}
+	delete[] bucket;
+}
+
+//桶排序即为计数排序的升级版，计数排序是一数一桶，而桶排序是多数一桶（一个范围内的在一桶），
+//然后在桶内进行单独排序（如插入排序），最后再将各个桶合并起来
+template<typename T> void Vector<T>::bucketsort(int lo, int hi)
+{
+	int largest = _elem[lo];
+	int minest = _elem[lo];
+	for (int i = lo; i < hi; i++)
+	{
+		if (_elem[i] > largest)
+			largest = _elem[i];
+		if (_elem[i] < minest)
+			minest = _elem[i];
+	}
+	//表示桶的数目，暂且定为5（bucket数组默认弄的很大）
+	int n = 5;
+	vector<vector<int>> bucket(n + 1);
+	int range = (largest - minest) / n;
+	if (range < 1) range = 1;
+	//先把数据全部插入到对应的桶中，每插入一个桶就进行一个插排
+	for (int i = lo; i < hi; i++)
+	{
+		int index = (_elem[i] - minest) / range;
+		bucket[index].push_back(_elem[i]);
+		for (int j = bucket[index].size() - 1; j > 0 && bucket[index][j] < bucket[index][j - 1]; j--)
+			swap(bucket[index][j], bucket[index][j - 1]);
+	}
+	//最后将桶中数据对原数组进行全部覆盖
+	int cur = lo;
+	for (int i = 0; i <= n; i++)
+		for (int j = 0; j < bucket[i].size(); j++)
+			_elem[cur++] = bucket[i][j];
+}
+
+//基数排序，从个位开始排序（暂时不能使用负数）
+template<typename T> void Vector<T>::radixsort(int lo, int hi)
+{
+	int i, j, k, factor;
+	const int radix = 10;
+	const int digits = 10;
+	queue<T> queues[radix];                                        //一组队列，用于存储不同基数的数据（每一级基数都仅且对应9个数）
+	for (i = 0, factor = 1; i < digits; factor *= radix, i++)      //digits表示最大位数，默认为10位，此处遍历10遍。也可以优化算法为当前数据中最大的数的那一位
+	{
+		for (j = lo; j < hi; j++)
+			queues[(_elem[j] / factor) % radix].push(_elem[j]);	   //每个数据，根据当前位数取余得到其基数，存入对应的队列中（对列恒定为0-9）
+		for (j = 0, k = lo; j < radix; j++)
+			while (!queues[j].empty())							   //按基数顺序遍历每个队列，重新将数据覆盖原数组data的同时，清空所有队列
+			{
+				_elem[k++] = queues[j].front();
+				queues[j].pop();
+			}
+	}
+	bool *pf = bucketsort;
 }
