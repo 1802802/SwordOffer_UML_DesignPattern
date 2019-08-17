@@ -45,6 +45,9 @@ public:
 	void countingsort(int lo, int hi);
 	void bucketsort(int lo, int hi);
 	void radixsort(int lo, int hi);
+	void moveDown(int first, int last);
+	void moveDown_reserve(int first, int last);
+	void heapsort(int lo, int hi);
 };
 
 #include "Vector.h"
@@ -227,7 +230,7 @@ template<typename T> void Vector<T>::sort()
 template<typename T> void Vector<T>::sort(int lo, int hi)
 {
 	srand((unsigned)time(NULL));
-	int n = 6;
+	int n = 7;
 	switch (n)
 	{
 	case 0: bubblesort(lo, hi); cout << "当前使用bubblesort" << endl; break;
@@ -237,7 +240,7 @@ template<typename T> void Vector<T>::sort(int lo, int hi)
 	case 4:	countingsort(lo, hi) ; cout << "当前使用countingsort" << endl; break;
 	case 5:	bucketsort(lo, hi); cout << "当前使用bucketsort" << endl; break;
 	case 6:	radixsort(lo, hi); cout << "当前使用radixsort" << endl;  break;
-	case 7:	break;
+	case 7:	heapsort(lo, hi); cout << "当前使用heapsort" << endl; break;
 	case 8:	break;
 	case 9: break;
 	default: break;
@@ -399,5 +402,62 @@ template<typename T> void Vector<T>::radixsort(int lo, int hi)
 				queues[j].pop();
 			}
 	}
-	bool *pf = bucketsort;
+}
+
+template<typename T> void Vector<T>::moveDown(int first, int last)  //堆的下滤算法，first为当前节点（数组的第一位），last为堆尾位置（数组的最后一位）
+{													   //从堆的最底层开始，反层次遍历的顺序遍历每个有孩子的节点（自下而上，由浅至深），孩子比自己大就交换，继续按着孩子原来的位置下滤
+	int largest = 2 * first + 1;                       //这里的largest计算的是first节点对应的左孩子位置
+	while (largest <= last)							   //判断first节点对应的左孩子是否还在区间内
+	{
+		if (largest < last && _elem[largest] < _elem[largest + 1])   //此处判断largest是否刚好为末节点，或者查看first的左孩子右孩子哪边大，largest取大边
+			largest++;
+		if (_elem[first] < _elem[largest])               //first作为父节点，与其最大的孩子比较，如果孩子大就换上来；如果不是，代表该节点稳健，跳出
+		{
+			swap(_elem[first], _elem[largest]);          //大的子节点largest和父节点first交换，继续判断first的两个孩子与其的大小关系
+			first = largest;						   //交换后，对交换过去的first节点继续进行下滤（循环实现，递归也行）
+			largest = 2 * first + 1;
+		}
+		else
+			//largest = last + 1;
+			break;
+	}
+}
+
+//小顶堆的建立，换了下movedown的符号
+template<typename T> void Vector<T>::moveDown_reserve(int first, int last)  //堆的下滤算法，first为当前节点（数组的第一位），last为堆尾位置（数组的最后一位）
+{													   //从堆的最底层开始，反层次遍历的顺序遍历每个有孩子的节点（自下而上，由浅至深），孩子比自己大就交换，继续按着孩子原来的位置下滤
+	int largest = 2 * first + 1;                       //这里的largest计算的是first节点对应的左孩子位置
+	while (largest <= last)							   //判断first节点对应的左孩子是否还在区间内
+	{
+		if (largest < last && _elem[largest] > _elem[largest + 1])   //此处判断largest是否刚好为末节点，或者查看first的左孩子右孩子哪边大，largest取大边
+			largest++;
+		if (_elem[first] > _elem[largest])               //first作为父节点，与其最大的孩子比较，如果孩子大就换上来；如果不是，代表该节点稳健，跳出
+		{
+			swap(_elem[first], _elem[largest]);          //大的子节点largest和父节点first交换，继续判断first的两个孩子与其的大小关系
+			first = largest;						   //交换后，对交换过去的first节点继续进行下滤（循环实现，递归也行）
+			largest = 2 * first + 1;
+		}
+		else
+			//largest = last + 1;
+			break;
+	}
+}
+
+//大顶堆的下滤实现升序，小顶堆的下滤实现降序
+template<typename T> void Vector<T>::heapsort(int lo, int hi)
+{
+	//默认当前数组为树结构的层次遍历序列，从所有的非叶节点进行操作（前size/2 - 1均为非叶节点）
+	for (int i = ((hi - lo) >> 1) - 1; i >= lo; --i)    //建堆，floyid建堆法，即自下而上地下滤每个节点。从size的中部选值，保持所取值都是有孩子的节点，避免无关计算
+		moveDown_reserve(i, hi - lo - 1);
+
+	cout << "建堆后数组为：   ";
+	for (int i = lo; i < hi - lo; i++)
+		cout << _elem[i] << " ";
+	cout << endl;
+
+	for (int i = hi - lo - 1; i >= lo + 1; --i)        //开始实质的堆排序，即不断地将data[0]（当前的最大数）交换到数组的区间末尾
+	{
+		swap(_elem[lo], _elem[i]);
+		moveDown_reserve(lo, i - 1);			   //通过每次交换之后的下滤，保证数组的首元素一直都是最大值
+	}
 }
