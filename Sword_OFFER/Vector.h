@@ -1,8 +1,16 @@
 #pragma once
-#include<time.h>
-#include <vector>
+#include <time.h>
+#include <list>
+#include <new>
 #include <queue>
 using namespace std;
+
+static int count1 = 0;
+void* operator new(size_t size)
+{
+	count1++;
+	return malloc(size);
+}
 
 template<typename T> class Vector
 {
@@ -46,8 +54,12 @@ public:
 	void bucketsort(int lo, int hi);
 	void radixsort(int lo, int hi);
 	void moveDown(int first, int last);
+	void moveUp(int rank);
 	void moveDown_reserve(int first, int last);
 	void heapsort(int lo, int hi);
+	void quicksort(int lo, int hi);
+	int partition(int lo, int hi);
+	void shellsort(int lo, int hi);
 };
 
 #include "Vector.h"
@@ -135,6 +147,7 @@ template<typename T> void Vector<T>::expand()
 			_elem[i] = _oldelem[i];
 		delete[] _oldelem;
 	}
+	cout << "expand" << endl;
 }
 
 template<typename T> void Vector<T>::shrink()
@@ -202,6 +215,8 @@ template<typename T> int Vector<T>::insert(int rank, T const&v)
 		_elem[i] = _elem[i - 1];
 	_elem[rank] = v;
 	_size++;
+
+	cout << "当前count1为：" << count1 << endl;
 	return rank;
 }
 
@@ -230,7 +245,7 @@ template<typename T> void Vector<T>::sort()
 template<typename T> void Vector<T>::sort(int lo, int hi)
 {
 	srand((unsigned)time(NULL));
-	int n = 7;
+	int n = 9;
 	switch (n)
 	{
 	case 0: bubblesort(lo, hi); cout << "当前使用bubblesort" << endl; break;
@@ -241,8 +256,8 @@ template<typename T> void Vector<T>::sort(int lo, int hi)
 	case 5:	bucketsort(lo, hi); cout << "当前使用bucketsort" << endl; break;
 	case 6:	radixsort(lo, hi); cout << "当前使用radixsort" << endl;  break;
 	case 7:	heapsort(lo, hi); cout << "当前使用heapsort" << endl; break;
-	case 8:	break;
-	case 9: break;
+	case 8:	quicksort(lo, hi); cout << "当前使用quicksort" << endl; break;
+	case 9: shellsort(lo, hi); cout << "当前使用shellsort" << endl; break;
 	default: break;
 	}
 }
@@ -423,6 +438,20 @@ template<typename T> void Vector<T>::moveDown(int first, int last)  //堆的下滤算
 	}
 }
 
+//堆的上滤，说穿了就是不断判断当前节点与其父节点的堆序性
+template<typename T> void Vector<T>::moveUp(int rank)  
+{
+	int parent_rank = (rank >> 1) - 1;
+	while (parent_rank >= 0)
+	{
+		if (_elem[rank] <= _elem[parent_rank])
+			break;
+		swap(_elem[rank], _elem[parent_rank]);
+		rank = parent_rank;
+		parent_rank = (rank >> 1) - 1;
+	}
+}
+
 //小顶堆的建立，换了下movedown的符号
 template<typename T> void Vector<T>::moveDown_reserve(int first, int last)  //堆的下滤算法，first为当前节点（数组的第一位），last为堆尾位置（数组的最后一位）
 {													   //从堆的最底层开始，反层次遍历的顺序遍历每个有孩子的节点（自下而上，由浅至深），孩子比自己大就交换，继续按着孩子原来的位置下滤
@@ -448,7 +477,7 @@ template<typename T> void Vector<T>::heapsort(int lo, int hi)
 {
 	//默认当前数组为树结构的层次遍历序列，从所有的非叶节点进行操作（前size/2 - 1均为非叶节点）
 	for (int i = ((hi - lo) >> 1) - 1; i >= lo; --i)    //建堆，floyid建堆法，即自下而上地下滤每个节点。从size的中部选值，保持所取值都是有孩子的节点，避免无关计算
-		moveDown_reserve(i, hi - lo - 1);
+		moveDown(i, hi - lo - 1);
 
 	cout << "建堆后数组为：   ";
 	for (int i = lo; i < hi - lo; i++)
@@ -458,6 +487,53 @@ template<typename T> void Vector<T>::heapsort(int lo, int hi)
 	for (int i = hi - lo - 1; i >= lo + 1; --i)        //开始实质的堆排序，即不断地将data[0]（当前的最大数）交换到数组的区间末尾
 	{
 		swap(_elem[lo], _elem[i]);
-		moveDown_reserve(lo, i - 1);			   //通过每次交换之后的下滤，保证数组的首元素一直都是最大值
+		moveDown(lo, i - 1);			   //通过每次交换之后的下滤，保证数组的首元素一直都是最大值
+	}
+}
+
+template<typename T> void Vector<T>::quicksort(int lo, int hi)
+{
+	if (hi - lo < 2)
+		return;
+	int mi = partition(lo, hi - 1);
+	quicksort(lo, mi);			//区间[lo,mi)
+	quicksort(mi + 1, hi);		//区间[mi+1,hi)
+}
+
+template<typename T> int Vector<T>::partition(int lo, int hi)
+{
+	int pivot = _elem[lo];
+	while (lo < hi)
+	{
+		while (lo < hi && pivot <= _elem[hi])
+			hi--;
+		_elem[lo] = _elem[hi];
+		while (lo < hi && pivot >= _elem[lo])
+			lo++;
+		_elem[hi] = _elem[lo];
+	}
+	_elem[lo] = pivot;
+	return lo;
+}
+
+//shell排序为将整个数组分割成固定步长h间距的序列，对不同步长位置的数据排列，最后的增量序列为1即为全部排列（可理解为高级的插入排序）
+template<typename T> void Vector<T>::shellsort(int lo, int hi)
+{
+	list<T> increment;
+	int size = hi - lo;
+	int temp = 0;
+	while (temp < (size / 3))
+		increment.push_front(temp = (temp * 3 + 1));
+	for (auto &h : increment)
+	{
+		//这里的h是递增序列的步长，而hh为所使用的i的初始值定义（插排的i初始值为lo+1）
+		for (int hh = lo + h; hh < lo + 2 * h; hh++)	//如h=4，n=17，则在h=4时j所选取的值为4,8,12,16，而i自己所选取的初始值为4,5,6,7
+		{
+			for (int i = hh; i < hi; i += h)			//说穿了，就是将插入排序的递增变成了变步长的递增方式（所有的hh换为1即为传统插排）
+			{
+				for (int j = i; j >= lo + h && _elem[j] < _elem[j - h]; j -= h)
+					swap(_elem[j], _elem[j - h]);
+			}
+		}
 	}
 }

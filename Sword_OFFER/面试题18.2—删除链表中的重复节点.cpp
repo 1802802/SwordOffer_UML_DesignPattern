@@ -34,12 +34,12 @@ public:
 			//3.1直到找到和头节点值不同的下个值
 			while (pNext->next != nullptr && pNext->val == pNext->next->val)
 				pNext = pNext->next;
-			return deleteDuplication(pNext);
+			return deleteDuplication1(pNext);
 		}
 		else
 		{
 			//3.2如果前后值不同，那么从next节点开始继续往后计算
-			pHead->next = deleteDuplication(pHead->next);
+			pHead->next = deleteDuplication1(pHead->next);
 			return pHead;
 		}
 	}

@@ -4,11 +4,11 @@
 using namespace std;
 
 //两个栈实现队列（一存一删，资源申请）牛客网3ms 488K
-class Solution
+template<typename T> class Solution
 {
 public:
 	//栈1中push数据
-	void push(int node) 
+	void push(T node) 
 	{
 		stack1.push(node);
 	}
@@ -28,7 +28,7 @@ public:
 				throw new exception("queue is empty!");
 		}
 		//2.在栈2中删数据
-		int head = stack2.top();
+		T head = stack2.top();
 		stack2.pop();
 
 		return head;
@@ -36,8 +36,8 @@ public:
 
 private:
 	//栈1存数据，栈2删数据，栈2数据来自栈1的倾倒，当其为空时向栈1申请
-	stack<int> stack1;
-	stack<int> stack2;
+	stack<T> stack1;
+	stack<T> stack2;
 };
 
 //两个队列实现栈（循环使用，插有数据的，在队伍切换中删）

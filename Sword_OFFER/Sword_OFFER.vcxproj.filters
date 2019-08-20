@@ -402,6 +402,9 @@
     <ClCompile Include="第7题 整数反转.cpp">
       <Filter>源文件\Leecode题目记录</Filter>
     </ClCompile>
+    <ClCompile Include="shared_ptr_test.cpp">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -414,6 +417,12 @@
       <Filter>源文件\数据结构代码</Filter>
     </ClInclude>
     <ClInclude Include="Vector.h">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClInclude>
+    <ClInclude Include="shared_ptr.h">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClInclude>
+    <ClInclude Include="string_pipei.h">
       <Filter>源文件\数据结构代码</Filter>
     </ClInclude>
   </ItemGroup>

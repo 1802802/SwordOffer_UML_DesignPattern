@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
+    <ClCompile Include="shared_ptr_test.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Vector_Test.cpp" />
@@ -244,6 +245,8 @@
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="shared_ptr.h" />
+    <ClInclude Include="string_pipei.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
