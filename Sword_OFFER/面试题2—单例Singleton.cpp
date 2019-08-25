@@ -5,7 +5,8 @@ using namespace std;
 class Singleton
 {
 public:
-	void Free() {};
+	virtual void Free() = 0;
+	static Singleton* getInstance() {};
 };
 
 //1.普通的懒汉式单例Singleton1，类外初始化

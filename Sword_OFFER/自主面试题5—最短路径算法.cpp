@@ -10,7 +10,7 @@ static void FloydWarshall(vector<vector<int>> &f, vector<int> &accrossPoint, vec
 	for (int k = 0; k < accrossPoint.size(); k++)
 		for (int i = 0; i < startPoint.size(); i++)
 			for (int j = 0; j < endPoint.size(); j++)
-				f[i][j] = min(f[i][j], f[i][k] + f[k][i]);
+				f[i][j] = min(f[i][j], f[i][k] + f[k][j]);
 }
 
 //2.Dijkstra算法，用于实现指定一个点到其余各个顶点的最短路径

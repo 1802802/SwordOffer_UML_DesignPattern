@@ -67,6 +67,52 @@ public:
 			return pHead;
 		}
 	}
+
+	//迭代版的保留一位
+	ListNode* deleteDuplication2(ListNode* pHead)
+	{
+		if (pHead == nullptr || pHead->next == nullptr)
+			return pHead;
+		ListNode* pPrev = pHead;
+		ListNode* pNode = pHead->next;
+		bool flag = false;
+		while (pNode != nullptr && pPrev != nullptr)
+		{
+			if (pPrev->val != pNode->val)
+			{
+				if (flag)
+					pPrev->next = pNode;
+				pPrev = pNode;
+				pNode = pNode->next;
+				flag = false;
+			}
+			else
+			{
+				pNode = pNode->next;
+				flag = true;
+			}
+		}
+		pPrev->next = pNode;
+		return pHead;
+	}
+
+	//迭代版的不保留
+	//ListNode* deleteDuplication3(ListNode* pHead)
+	//{
+	//	if (pHead == nullptr || pHead->next == nullptr)
+	//		return pHead;
+	//	ListNode* pPrev = pHead;
+	//	ListNode* pNode = pHead->next;
+	//	while (pNode != nullptr && pPrev != nullptr)
+	//	{
+	//		while (pNode->next != nullptr && pNode->next->val == pNode->val)
+	//			pNode = pNode->next;
+	//		pPrev->next = pNode->next;
+	//		pPrev = pNode->next;
+	//	}
+	//	pPrev->next = pNode;
+	//	return pHead;
+	//}
 };
 
 int main_offer18_2()

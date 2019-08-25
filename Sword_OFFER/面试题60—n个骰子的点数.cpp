@@ -58,7 +58,7 @@ list<map<int, double>> PrintProbability_Solution1(int n)
 	for (int i = 2; i <= n; i++)
 	{
 		//比如当i为3时，其点数可能为3到18，所以j的范围为[i, pointNum（face * n）]
-		for (int j = i; j <= pointNum; j++)
+		for (int j = i; j <= face*i; j++)
 		{
 			//实现时，注意j-k值的合法性，同时注意k最大只能到face与j
 			for (int k = 1; k <= face && k <= j; k++)

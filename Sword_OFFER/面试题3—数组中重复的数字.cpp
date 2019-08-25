@@ -45,7 +45,7 @@ bool duplicate3(int numbers[], int length, int* duplication)
 		return false;
 	//2.保护数组中的数据不符合题目条件，值小于0或大于n-1时
 	for (int i = 0; i < length; i++)
-		if (numbers[i] < 0 || numbers[i]>length - 1)
+		if (numbers[i] < 0 || numbers[i] > length - 1)
 			return false;
 	//3.正式的下标对比法流程，遍历数组中的所有数据
 	for (int i = 0; i < length; i++)

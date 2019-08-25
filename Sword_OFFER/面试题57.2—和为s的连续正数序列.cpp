@@ -23,17 +23,24 @@ public:
 
 		int first = 1;
 		int second = 2;
+		int mix = first + second;
 
 		while (first < second)
 		{
 			//1.计算当前first到second序列的和大小，大则递增first，小则递增second，相等则存入并双递增
-			int mix = 0;
-			for (int i = first; i <= second; i++)
-				mix += i;
+			
+			//for (int i = first; i <= second; i++)
+			//	mix += i;
 			if (mix > sum)
+			{
+				mix -= first;
 				first++;
+			}
 			else if (mix < sum)
+			{
 				second++;
+				mix += second;
+			}
 			else
 			{
 				//2.找到一次序列后加入数组，然后将前后指针均+1
@@ -43,6 +50,7 @@ public:
 				save.push_back(temp);
 				first++;
 				second++;
+				mix += second - first + 1;
 			}
 		}
 		return save;

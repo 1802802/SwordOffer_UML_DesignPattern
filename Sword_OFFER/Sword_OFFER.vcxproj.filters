@@ -180,13 +180,7 @@
     <ClCompile Include="拼多多2020面试题1—.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
-    <ClCompile Include="拼多多2020面试题3—.cpp">
-      <Filter>源文件\各种自主面试题</Filter>
-    </ClCompile>
     <ClCompile Include="拼多多2020面试题2—.cpp">
-      <Filter>源文件\各种自主面试题</Filter>
-    </ClCompile>
-    <ClCompile Include="拼多多2020面试题4—.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
     <ClCompile Include="面试题30—包含min函数的栈.cpp">
@@ -405,6 +399,24 @@
     <ClCompile Include="shared_ptr_test.cpp">
       <Filter>源文件\数据结构代码</Filter>
     </ClCompile>
+    <ClCompile Include="Timer函数调用类测试.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="京东2020面试题1.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="京东2020面试题2.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="京东2020面试题3.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="京东2020面试题4.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="华为2020武研所优招现场二面笔试题.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
@@ -425,5 +437,13 @@
     <ClInclude Include="string_pipei.h">
       <Filter>源文件\数据结构代码</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt">
+      <Filter>源文件\各种自主面试题</Filter>
+    </Text>
+    <Text Include="out.txt">
+      <Filter>源文件\各种自主面试题</Filter>
+    </Text>
   </ItemGroup>
 </Project>

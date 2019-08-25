@@ -3,6 +3,7 @@
 #include <list>
 #include <new>
 #include <queue>
+#include <stack>
 using namespace std;
 
 static int count1 = 0;
@@ -60,6 +61,7 @@ public:
 	void quicksort(int lo, int hi);
 	int partition(int lo, int hi);
 	void shellsort(int lo, int hi);
+	void quicksort2(int lo, int hi);
 };
 
 #include "Vector.h"
@@ -245,7 +247,7 @@ template<typename T> void Vector<T>::sort()
 template<typename T> void Vector<T>::sort(int lo, int hi)
 {
 	srand((unsigned)time(NULL));
-	int n = 9;
+	int n = 10;
 	switch (n)
 	{
 	case 0: bubblesort(lo, hi); cout << "当前使用bubblesort" << endl; break;
@@ -258,6 +260,7 @@ template<typename T> void Vector<T>::sort(int lo, int hi)
 	case 7:	heapsort(lo, hi); cout << "当前使用heapsort" << endl; break;
 	case 8:	quicksort(lo, hi); cout << "当前使用quicksort" << endl; break;
 	case 9: shellsort(lo, hi); cout << "当前使用shellsort" << endl; break;
+	case 10: quicksort2(lo, hi); cout << "当前使用quicksort2" << endl; break;
 	default: break;
 	}
 }
@@ -493,7 +496,7 @@ template<typename T> void Vector<T>::heapsort(int lo, int hi)
 
 template<typename T> void Vector<T>::quicksort(int lo, int hi)
 {
-	if (hi - lo < 2)
+	if (hi - lo < 2 || lo < 0 || hi <= 0)
 		return;
 	int mi = partition(lo, hi - 1);
 	quicksort(lo, mi);			//区间[lo,mi)
@@ -535,5 +538,35 @@ template<typename T> void Vector<T>::shellsort(int lo, int hi)
 					swap(_elem[j], _elem[j - h]);
 			}
 		}
+	}
+}
+
+//快排的非递归实现，partition函数仍然选择原来的（就是使用栈来存区间[lo,mi)与[mi+1,hi)
+template<typename T> void Vector<T>::quicksort2(int lo, int hi)
+{
+	if (lo < 0 || hi <= 0 || lo >= hi)
+		return;
+	stack<int> save;
+	save.push(hi);
+	save.push(lo);
+	while (!save.empty())
+	{
+		lo = save.top(); save.pop();
+		hi = save.top(); save.pop();
+		if (hi - lo >= 2)
+		{
+			int pivot = partition(lo, hi - 1);
+			if (hi - pivot >= 2)
+			{
+				save.push(hi);
+				save.push(pivot + 1);
+			}
+			if (pivot - lo >= 2)
+			{
+				save.push(pivot);
+				save.push(lo);
+			}
+		}
+
 	}
 }

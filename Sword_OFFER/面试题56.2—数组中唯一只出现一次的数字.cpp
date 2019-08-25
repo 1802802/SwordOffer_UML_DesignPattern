@@ -54,7 +54,7 @@ int FindNumberAppearingOnce2(int numbers[], int length)
 			//这里表示将数组中所有的数都根据i进行右移，将其与1进行&操作，得到该数字位于i位的进制大小
 			sum += (numbers[j] >> i) & 0x1;
 		//这里表示将所有的数据%3后左移i位进行|操作，用于将当前计算的i位嵌入num当中
-		num |= (sum % 3) << i;
+		num += (sum % 3) << i;
 	}
 	return num;
 }
@@ -141,7 +141,7 @@ static void Test9()
 	Test("Test9", numbers, sizeof(numbers) / sizeof(int), expected);
 }
 
-int main_offer56_2(int argc, char* argv[])
+int main_offer_56_2(int argc, char* argv[])
 {
 	Test1();
 	Test2();

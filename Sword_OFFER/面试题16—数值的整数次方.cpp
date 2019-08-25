@@ -62,7 +62,7 @@ public:
 	double calculate(double base, unsigned int exponent)
 	{
 		if (exponent == 0)
-			return 1;
+			return 1.0;
 		if (exponent == 1)
 			return base;
 		//递归的快速实现次方运算

@@ -1,9 +1,11 @@
 #include <iostream>
 #include <list>
 #include "Vector.h"
+#include <time.h>    
+
 using namespace std;
 
-int main()
+int main_testttt()
 {
 	Vector<int> a(1, 0);
 	for (int i = 0; i < 5; i++)
@@ -40,6 +42,10 @@ int main()
 	cout << count1 << endl;
 	v->~Vector();  //这样将会只销毁对象而不会释放内存，但是temp自身内存的释放问题还是没有解决（需要写一个placememt delete来实现）
 	delete v2;
+
+	time_t myt = time(NULL);
+	cout << myt << endl;
+
 
 	return 0;
 }

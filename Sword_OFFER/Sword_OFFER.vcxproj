@@ -119,10 +119,16 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="shared_ptr_test.cpp" />
+    <ClCompile Include="Timer函数调用类测试.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Vector_Test.cpp" />
+    <ClCompile Include="京东2020面试题1.cpp" />
+    <ClCompile Include="京东2020面试题2.cpp" />
+    <ClCompile Include="京东2020面试题3.cpp" />
+    <ClCompile Include="京东2020面试题4.cpp" />
     <ClCompile Include="前n位依次被n整除.cpp" />
+    <ClCompile Include="华为2020武研所优招现场二面笔试题.cpp" />
     <ClCompile Include="回文字符串判断.cpp" />
     <ClCompile Include="大疆2020笔试题1.cpp" />
     <ClCompile Include="大疆2020笔试题2.cpp" />
@@ -132,8 +138,6 @@
     <ClCompile Include="字节跳动2020笔试题3.cpp" />
     <ClCompile Include="字节跳动2020笔试题4.cpp" />
     <ClCompile Include="拼多多2020面试题1—.cpp" />
-    <ClCompile Include="拼多多2020面试题3—.cpp" />
-    <ClCompile Include="拼多多2020面试题4—.cpp" />
     <ClCompile Include="拼多多面试题1—选靓号.cpp" />
     <ClCompile Include="拼多多2020面试题2—.cpp" />
     <ClCompile Include="拼多多面试题2—种树.cpp" />
@@ -249,6 +253,10 @@
     <ClInclude Include="string_pipei.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="Vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
+    <Text Include="out.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
