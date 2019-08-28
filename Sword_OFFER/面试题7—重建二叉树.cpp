@@ -63,6 +63,7 @@ public:
 		if (preStart > preEnd || midStart > midEnd)  //递归基，当数据不合法时返回NULL
 			return NULL;
 		TreeNode * root = new TreeNode(pre[preStart]);
+		//这里的循环的意思是找到中序遍历中的根节点再进行操作
 		for (int i = midStart; i <= midEnd; i++)
 		{
 			if (vin[i] == root->val)

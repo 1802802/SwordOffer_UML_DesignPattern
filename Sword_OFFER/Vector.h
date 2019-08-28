@@ -7,11 +7,11 @@
 using namespace std;
 
 static int count1 = 0;
-void* operator new(size_t size)
-{
-	count1++;
-	return malloc(size);
-}
+//void* operator new(size_t size)
+//{
+//	count1++;
+//	return malloc(size);
+//}
 
 template<typename T> class Vector
 {

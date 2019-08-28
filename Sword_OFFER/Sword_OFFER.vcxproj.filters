@@ -417,6 +417,21 @@
     <ClCompile Include="华为2020武研所优招现场二面笔试题.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
+    <ClCompile Include="第14题 最长公共前缀.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="第XXX题 删除链表的倒数第N个节点.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="题 合并两个有序数组.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="大数相加探讨.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="环形队列实现cpp.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

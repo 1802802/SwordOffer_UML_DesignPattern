@@ -43,7 +43,7 @@ public:
 		int index = Partition(input, start, end);
 		while (index != k - 1)
 		{
-			if (index > k - 1)
+			if (index >= k)
 			{
 				end = index - 1;
 				index = Partition(input, start, end);
@@ -55,6 +55,7 @@ public:
 			}
 		}
 		vector<int> tmp;
+		tmp.resize(3);
 		for (int i = 0; i < k; i++)
 			tmp.push_back(input[i]);
 		return tmp;
@@ -66,10 +67,10 @@ public:
 		int tmp = numbers[start];
 		while (start < end)
 		{
-			while (start < end && numbers[end] >= tmp)
+			while (start < end && numbers[end] <= tmp)
 				end--;
 			numbers[start] = numbers[end];
-			while (start < end && numbers[start] <= tmp)
+			while (start < end && numbers[start] >= tmp)
 				start++;
 			numbers[end] = numbers[start];
 		}
@@ -93,6 +94,29 @@ public:
 			input.pop_back();   //pop_heap之后要pop_back，push_back之后要push_heap
 		}
 		return tmp;
+	}
+
+	//5.更高级的写法的划分写法，将
+	vector<int> GetLeastNumbers_Solution5(vector<int>& input, int k)
+	{
+		if (input.size() < 1)
+			return vector<int>();
+		if (k > input.size() || k <= 0)
+			return vector<int>();
+		int index = Get(input, 0, input.size() - 1, k);
+		input.resize(k);
+		return input;
+	}
+
+	int Get(vector<int>& input, int lo, int hi, int k)
+	{
+		if (lo >= hi)  //注意这里的条件
+			return input[lo];
+		int index = Partition(input, lo, hi);
+		if (index >= k)
+			return Get(input, lo, index - 1, k);
+		else
+			return Get(input, index + 1, hi, k - index);
 	}
 
 	//4.采用红黑树来实现最小数据的存储过程（分三步：将数据插入容器；容器满之后比较最大值，小则替换大则无视；在替换最大值后重新选择最大值）
@@ -133,6 +157,53 @@ public:
 	}
 };
 
+//随机快排的做法
+class Solution222
+{
+public:
+
+	int partition(vector<int> &input, int lo, int hi)
+	{
+		int temp = lo + rand() % (hi - lo + 1);
+		swap(input[lo], input[temp]);
+		int pivot = input[lo];
+		while (lo < hi)
+		{
+			while (lo < hi && pivot <= input[hi])
+				hi--;
+			input[lo] = input[hi];
+			while (lo < hi && pivot >= input[lo])
+				lo++;
+			input[hi] = input[lo];
+		}
+		input[lo] = pivot;
+		return lo;
+	}
+
+	vector<int> GetLeastNumbers_Solution(vector<int>& input, int k)
+	{
+		if (input.size() == 0 || k <= 0 || k > input.size())
+			return vector<int>();
+		int start = 0, end = input.size() - 1;
+		int index = partition(input, start, end);
+		while (index != k - 1)
+		{
+			if (index >= k)
+			{
+				end = index - 1;
+				index = partition(input, start, end);
+			}
+			else
+			{
+				start = index + 1;
+				index = partition(input, start, end);
+			}
+		}
+		input.resize(k);
+		return input;
+	}
+};
+
 // ====================测试代码====================
 static void Test(char* testName, int* data, int n, int* expectedResult, int k)
 {
@@ -155,7 +226,7 @@ static void Test(char* testName, int* data, int n, int* expectedResult, int k)
 
 	printf("Result for solution1:\n");
 	Solution s;
-	vector<int> a = s.GetLeastNumbers_Solution3(vectorData, k);
+	vector<int> a = s.GetLeastNumbers_Solution5(vectorData, k);
 	if (expectedResult != nullptr)
 	{
 		for (int i = 0; i < a.size(); ++i)

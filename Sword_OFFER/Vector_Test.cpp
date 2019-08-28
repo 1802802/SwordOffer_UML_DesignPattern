@@ -1,12 +1,40 @@
 #include <iostream>
 #include <list>
+#include <string>
 #include "Vector.h"
+#include <stdio.h>                                                                                                                                                                                                                                                            
+#include <stdlib.h>
 #include <time.h>    
+//#define  _CRTDBG_MAP_ALLOC
+//#include "crtdbg.h"
+//#include <string.h>
+//#ifdef _DEBUG
+//#define DEBUG_CLIENTBLOCK   new( _CLIENT_BLOCK, __FILE__, __LINE__)
+//#define new DEBUG_CLIENTBLOCK
+//#else
+//#define DEBUG_CLIENTBLOCK
+//#endif
 
 using namespace std;
 
-int main_testttt()
+class s
 {
+public:
+	s() { cout << "main函数之前执行" << endl; }
+};
+
+//s sss;
+
+//使用C的定义方式可以实现某些函数在main函数之前与之后执行的情况
+//__attribute((destructor))
+//__attribute((constructor))
+
+static int temp = 1;
+
+int main_vectortest()
+{
+	cout << "main函数开始执行" << endl;
+	//_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
 	Vector<int> a(1, 0);
 	for (int i = 0; i < 5; i++)
 	{
@@ -46,6 +74,23 @@ int main_testttt()
 	time_t myt = time(NULL);
 	cout << myt << endl;
 
+	string s;
+	s.substr(0, 3);
+
+	int t1 = 3;
+	int *t2 = &t1;
+	double *t3 = (double*)t2;
+	cout << t2 << endl;
+	cout << *t2 << endl;
+	cout << t3 << endl;
+	cout << *t3 << endl;
+	
+	string aaa = "a";
+	string bbb = "b";
+	string ccc = aaa + bbb;
+	cout << ccc << endl;
+
+	_CrtDumpMemoryLeaks();//注意这条语句的摆放位置，因为这会直接影响到你的判断结果
 
 	return 0;
 }
