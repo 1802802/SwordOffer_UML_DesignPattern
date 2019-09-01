@@ -432,6 +432,30 @@
     <ClCompile Include="环形队列实现cpp.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
+    <ClCompile Include="第38题 报数.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="strlcpy实现.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="第73题 矩阵置零.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="第5题 最长回文字符串.cpp">
+      <Filter>源文件\Leecode题目记录</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多2020校招第1题.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多2020校招第2题.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多2020校招第3题.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="拼多多2020校招第4题.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

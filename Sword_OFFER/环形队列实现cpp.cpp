@@ -74,7 +74,7 @@ public:
 	}
 };
 
-int main()
+int main_circlequeue()
 {
 	circlequeue<int> q(5);
 	q.push(1);
@@ -95,6 +95,10 @@ int main()
 	q.pop();
 	cout << q.top() << endl;
 	q.pop();
+	q.push(5);
+	q.push(5);
+	q.push(5);
+	q.popall();
 	//cout << q.top() << endl;
 	//q.pop();
 

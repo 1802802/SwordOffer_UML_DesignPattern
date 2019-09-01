@@ -86,6 +86,7 @@ template<typename T> Vector<T>::Vector(const Vector& vec)
 
 template<typename T> Vector<T>::Vector(Vector&& vec) noexcept
 {
+	cout << "移动构造函数" << endl;
 	//移动构造函数使用移动赋值，即将vec的内部属性赋值给本对象后，将vec的全部置空
 	_elem = vec._elem;
 	_size = vec._size;
@@ -113,6 +114,7 @@ template<typename T> Vector<T>& Vector<T>::operator=(const Vector<T>& vec)
 
 template<typename T> Vector<T>& Vector<T>::operator=(Vector&& vec) noexcept
 {
+	cout << "移动赋值运算符" << endl;
 	if (this != &vec)
 	{
 		delete[] _elem;

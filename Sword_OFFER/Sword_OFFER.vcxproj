@@ -119,6 +119,7 @@
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
     <ClCompile Include="shared_ptr_test.cpp" />
+    <ClCompile Include="strlcpy实现.cpp" />
     <ClCompile Include="Timer函数调用类测试.cpp" />
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Vector.cpp" />
@@ -138,6 +139,10 @@
     <ClCompile Include="字节跳动2020笔试题2.cpp" />
     <ClCompile Include="字节跳动2020笔试题3.cpp" />
     <ClCompile Include="字节跳动2020笔试题4.cpp" />
+    <ClCompile Include="拼多多2020校招第1题.cpp" />
+    <ClCompile Include="拼多多2020校招第2题.cpp" />
+    <ClCompile Include="拼多多2020校招第3题.cpp" />
+    <ClCompile Include="拼多多2020校招第4题.cpp" />
     <ClCompile Include="拼多多2020面试题1—.cpp" />
     <ClCompile Include="拼多多面试题1—选靓号.cpp" />
     <ClCompile Include="拼多多2020面试题2—.cpp" />
@@ -148,6 +153,9 @@
     <ClCompile Include="第14题 最长公共前缀.cpp" />
     <ClCompile Include="第207题 课程表（拓扑排序）.cpp" />
     <ClCompile Include="第210题 课程表 II（拓扑排序）.cpp" />
+    <ClCompile Include="第38题 报数.cpp" />
+    <ClCompile Include="第5题 最长回文字符串.cpp" />
+    <ClCompile Include="第73题 矩阵置零.cpp" />
     <ClCompile Include="第7题 整数反转.cpp" />
     <ClCompile Include="第XXX题 删除链表的倒数第N个节点.cpp" />
     <ClCompile Include="给定数字的全排列问题.cpp" />
