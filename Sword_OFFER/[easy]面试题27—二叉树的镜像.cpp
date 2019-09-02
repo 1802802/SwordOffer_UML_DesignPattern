@@ -18,6 +18,17 @@ static void MirrorRecursively(BinaryTreeNode *pRoot)
 	MirrorRecursively(pRoot->m_pRight);
 }
 
+//运行时间：3ms，占用内存：600k，思路更清晰，可见这题很简单
+void Mirror(BinaryTreeNode *pRoot)
+{
+	if (pRoot == nullptr)
+		return;
+	if (pRoot->m_pLeft != pRoot->m_pRight)
+		swap(pRoot->m_pLeft, pRoot->m_pRight);
+	Mirror(pRoot->m_pLeft);
+	Mirror(pRoot->m_pLeft);
+}
+
 // ====================测试代码====================
 // 测试完全二叉树：除了叶子节点，其他节点都有两个子节点
 //            8

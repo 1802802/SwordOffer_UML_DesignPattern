@@ -31,7 +31,7 @@ public:
 
 static int temp = 1;
 
-int main_vectortest()
+int main_d3e1()
 {
 	cout << "main函数开始执行" << endl;
 	//_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);

@@ -32,7 +32,7 @@ public:
 		path.push_back(root->m_nValue);
 		currentSum += root->m_nValue;
 
-		//0.5剪枝（提升速度用）
+		//0.5剪枝（提升速度用）（建议删除，二叉树的数中可能有负数，所以不要随意剪枝）
 		if (currentSum > expectNumber)
 		{
 			path.pop_back();

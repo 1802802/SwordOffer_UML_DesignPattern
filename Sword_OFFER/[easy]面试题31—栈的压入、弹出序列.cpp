@@ -42,6 +42,23 @@ public:
 		else
 			return false;
 	}
+
+	bool IsPopOrder2(vector<int> pushV, vector<int> popV)
+	{
+		if (pushV.empty() || popV.empty())
+			return false;
+		vector<int> stack;
+		for (int i = 0, j = 0; i < pushV.size(); i++)
+		{
+			stack.push_back(pushV[i]);
+			while (!stack.empty() && j < popV.size() && stack.back() == popV[j])
+			{
+				stack.pop_back();
+				j++;
+			}
+		}
+		return stack.empty();
+	}
 };
 
 // ====================²âÊÔ´úÂë====================
