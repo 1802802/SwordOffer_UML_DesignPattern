@@ -35,6 +35,29 @@ public:
 		}
 		return cnt;
 	}
+
+	//运行时间：3ms，占用内存：468k
+	//i到1到10到100类推，计算1-n中数字在个位为1，十位为1，百位为1的类推
+	int NumberOf1Between1AndN_Solution2(int n)
+	{
+		if (n <= 0)
+			return 0;
+		long long cnt = 0;
+		for (long long i = 1; i <= n; i *= 10)
+		{
+			cnt += (n / (i * 10))*i + [&]()
+			{
+				int k = n % (i * 10);
+				if (k > i * 2 - 1)
+					return i;
+				else if (k < i)
+					return (long long)0;
+				else
+					return k - i + 1;
+			}();
+		}
+		return cnt;
+	}
 };
 
 // ====================测试代码====================
@@ -43,7 +66,7 @@ static void Test(const char* testName, int n, int expected)
 	if (testName != nullptr)
 		printf("%s begins: \n", testName);
 	Solution s;
-	if (s.NumberOf1Between1AndN_Solution(n) == expected)
+	if (s.NumberOf1Between1AndN_Solution2(n) == expected)
 		printf("Solution1 passed.\n");
 	else
 		printf("Solution1 failed.\n");

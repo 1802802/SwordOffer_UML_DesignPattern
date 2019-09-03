@@ -41,6 +41,7 @@ public:
 		int start = 0; int end = input.size() - 1;
 		//找轴点（将轴点不断地逼近k-1处）
 		int index = Partition(input, start, end);
+		//这里务必注意，最小的k个数对应到index是k-1
 		while (index != k - 1)
 		{
 			if (index >= k)
