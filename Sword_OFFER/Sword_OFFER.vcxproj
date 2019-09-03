@@ -129,6 +129,10 @@
     <ClCompile Include="京东2020面试题2.cpp" />
     <ClCompile Include="京东2020面试题3.cpp" />
     <ClCompile Include="京东2020面试题4.cpp" />
+    <ClCompile Include="优必选2020校招第一题.cpp" />
+    <ClCompile Include="优必选2020校招第三题.cpp" />
+    <ClCompile Include="优必选2020校招第二题.cpp" />
+    <ClCompile Include="优必选2020校招第四题.cpp" />
     <ClCompile Include="前n位依次被n整除.cpp" />
     <ClCompile Include="华为2020武研所优招现场二面笔试题.cpp" />
     <ClCompile Include="回文字符串判断.cpp" />
