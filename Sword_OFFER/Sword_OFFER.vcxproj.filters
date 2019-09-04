@@ -90,15 +90,6 @@
     <ClCompile Include="面试题18.2—删除链表中的重复节点.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
-    <ClCompile Include="面试题19—正则表达式匹配.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
-    <ClCompile Include="面试题20—表示数值的字符串.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
-    <ClCompile Include="面试题23—链表中环的入口结点.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
     <ClCompile Include="虚继承的sizeof思考.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -168,9 +159,6 @@
     <ClCompile Include="面试题48—最长不含重复字符的子字符串.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
-    <ClCompile Include="面试题50.2—字符流中第一个只出现一次的字符.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
     <ClCompile Include="第207题 课程表（拓扑排序）.cpp">
       <Filter>源文件\Leecode题目记录</Filter>
     </ClCompile>
@@ -210,25 +198,7 @@
     <ClCompile Include="面试题60—n个骰子的点数.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
-    <ClCompile Include="面试题61—扑克牌中的顺子.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
-    <ClCompile Include="面试题62—圆圈中最后剩下的数字.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
     <ClCompile Include="面试题63—股票的最大利润.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
-    <ClCompile Include="面试题64—求1到n.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
-    <ClCompile Include="面试题65—不用加减乘除做加法.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
-    <ClCompile Include="面试题66—构建乘积数组.cpp">
-      <Filter>源文件\剑指offer面试题</Filter>
-    </ClCompile>
-    <ClCompile Include="面试题67—把字符串转换成整数.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
     <ClCompile Include="自主面试题3—从1-N的数字里选出M个数字组成一个数组.cpp">
@@ -472,6 +442,36 @@
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
     <ClCompile Include="[easy]面试题58.1—翻转字符串.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="[middle]面试题61—扑克牌中的顺子.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[middle]面试题62—圆圈中最后剩下的数字.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[easy]面试题64—求1到n.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[hard]面试题65—不用加减乘除做加法.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[hard]面试题67—把字符串转换成整数.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="[easy]面试题66—构建乘积数组.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="[字符匹配暂时搁置]面试题19—正则表达式匹配.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="[字符匹配暂时搁置]面试题20—表示数值的字符串.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="[easy]面试题50.2—字符流中第一个只出现一次的字符.cpp">
+      <Filter>源文件\剑指offer面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="[middle]面试题23—链表中环的入口结点.cpp">
       <Filter>源文件\剑指offer面试题</Filter>
     </ClCompile>
   </ItemGroup>

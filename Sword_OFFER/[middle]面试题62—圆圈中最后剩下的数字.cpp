@@ -44,6 +44,7 @@ public:
 	}
 
 	//2.找到数学规律后的递归f(n,m) = [f(n-1, m)] + m] % n，当你 n = 1时，只有一个数字，则必为0
+	//dp[n] = (dp[n-1] + m) % n
 	//其中f(n,m)表示，在n个数走m步时，被删除的数字的下一位数字（即最后被保留的那位数字）
 	int LastRemaining_Solution2(int n, int m)
 	{

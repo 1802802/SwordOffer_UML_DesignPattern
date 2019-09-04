@@ -60,7 +60,26 @@ public:
 			throw new exception("length is error");
 		}
 	}
+
+	//简略做法，时间复杂度O(n2)，运行时间：4ms，占用内存：456k
+	vector<int> multiply3(const vector<int>& A)
+	{
+		vector<int> B(A.size(), 1);
+		for (int i = 0; i < A.size(); i++)
+		{
+			for (int j = 0; j < i; j++)
+				B[i] *= A[j];
+		}
+		for (int i = 0; i < A.size(); i++)
+		{
+			for (int j = A.size() - 1; j > i; j--)
+				B[i] *= A[j];
+		}
+		return B;
+	}
 };
+
+
 
 //================= Test Code =================
 static bool EqualArrays(const vector<double>& input, const vector<double>& output)

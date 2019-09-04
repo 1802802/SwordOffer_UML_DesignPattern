@@ -130,6 +130,74 @@ public:
 	}
 };
 
+//一个考虑开始输入是空格情况的strtoint
+class Solution67_2
+{
+public:
+	int StrToInt(string str)
+	{
+		invalidInput = false;
+		if (str.empty())
+			return 0;
+		int minus = 1;
+		int index = 0;
+
+		while (str[index] == ' ')
+		{
+			index++;
+		}
+
+		if (str[index] == '+')
+		{
+			minus = 1;
+			index++;
+		}
+		else if (str[index] == '-')
+		{
+			minus = -1;
+			index++;
+		}
+		else if (str[index] >= '0' && str[index] <= '9')
+		{
+			return StrToInt(str, index, minus);
+		}
+		else
+			return 0;
+
+		if (str[index] >= '0' && str[index] <= '9')
+			return StrToInt(str, index, minus);
+		else
+			return 0;
+	}
+
+	int StrToInt(string &str, int &index, int &minus)
+	{
+		long long result = 0;
+		while (index < str.size())
+		{
+			if (str[index] >= '0' && str[index] <= '9')
+			{
+				result = 10 * result + minus*(str[index++] - '0');
+				if (result >(int)0x7FFFFFFF || result < (int)0x80000000)
+				{
+					result = 0;
+					break;
+				}
+			}
+			else
+			{
+				result = 0;
+				break;
+			}
+		}
+		if (index == str.size())
+			invalidInput = true;
+		return result;
+	}
+public:
+	bool invalidInput;
+};
+
 // ====================测试代码====================
 static void Test(const char* string)
 {
