@@ -53,9 +53,10 @@ public:
 			int next_2 = uglyNumberSave[times_2] * 2;
 			int next_3 = uglyNumberSave[times_3] * 3;
 			int next_5 = uglyNumberSave[times_5] * 5;
-			//注意min与max函数的惨只能有两个，多个的话用initialize_list实现
+			//注意min与max函数的参只能有两个，多个的话用initialize_list实现
 			//initialize_list作为一个模板类，不仅仅是用作初始化容器类，而且本身也可以单独用作容器使用，只是比较寒碜，只提供了begin(), end(), size()三个方法。
 			uglyNumberSave[i] = min({ next_2, next_3, next_5 });
+			//三个if连等于，其原因在于需要保证uglynumber前面的数不能出现重复值（即curnum可能有等于多个next的情况）
 			if (next_2 == uglyNumberSave[i])
 				times_2++;
 			if (next_3 == uglyNumberSave[i])

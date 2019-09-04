@@ -18,6 +18,28 @@ using namespace std;
 class Solution 
 {
 public:
+	string ReverseSentence1(string &str)
+	{
+		for (int i = 0, j = 0; i < str.size();)
+		{
+			for (; j < str.size(); j++)
+			{
+				if (str[j] == ' ')
+					break;
+			}
+			rotate(str, i, j - 1);
+			i = ++j;
+		}
+		rotate(str, 0, str.size() - 1);
+		return str;
+	}
+
+	void rotate(string &str, int lo, int hi)
+	{
+		while (lo < hi)
+			swap(str[lo++], str[hi--]);
+	}
+
 	string ReverseSentence(string& str) 
 	{
 		if (str.size() <= 0)
@@ -77,10 +99,11 @@ public:
 static void Test(const char* testName, string input, string expectedResult)
 {
 	if (testName != nullptr)
-		printf("%s begins: ", testName);
+		printf("%s begins: \n", testName);
 
 	Solution s;
-	cout << s.ReverseSentence2(input) << endl;
+	cout << s.ReverseSentence1(input) << endl;
+	cout << expectedResult << endl;
 
 	if ((input.empty() && expectedResult.empty())
 		|| (!input.empty() && input == expectedResult))
@@ -92,8 +115,8 @@ static void Test(const char* testName, string input, string expectedResult)
 // 功能测试，句子中有多个单词
 static void Test1()
 {
-	string input = "I am a student.";
-	string expected = "student. a am I";
+	string input = "   I am  a student.";
+	string expected = "student. a  am I   ";
 
 	Test("Test1", input, expected);
 }
@@ -127,7 +150,7 @@ static void Test5()
 	Test("Test5", input, expected);
 }
 
-int main_offer58_1(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	Test1();
 	Test2();
