@@ -150,7 +150,7 @@ static void Test5()
 	Test("Test5", input, expected);
 }
 
-int main(int argc, char* argv[])
+int main_offer58_1(int argc, char* argv[])
 {
 	Test1();
 	Test2();

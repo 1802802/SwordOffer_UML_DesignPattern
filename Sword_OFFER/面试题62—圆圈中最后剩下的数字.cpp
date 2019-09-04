@@ -49,6 +49,8 @@ public:
 	{
 		if (n <= 0 || m <= 0)
 			return -1;
+		if (n == 1)
+			return 0;
 		int first = 0;
 		for (int i = 2; i <= n; i++)
 			first = (first + m) % i;
@@ -107,7 +109,7 @@ static void Test6()
 	Test("Test6", 4000, 997, 1027);
 }
 
-int main_offer62(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	Test1();
 	Test2();
