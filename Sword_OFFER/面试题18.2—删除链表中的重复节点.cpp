@@ -115,6 +115,28 @@ public:
 	//}
 };
 
+class Solutionoffer18_2
+{
+public:
+	ListNode* deleteDuplication(ListNode* pHead)
+	{
+		if (pHead == nullptr || pHead->next == nullptr)
+			return pHead;
+		if (pHead->val == pHead->next->val)
+		{
+			while (pHead->next != nullptr && pHead->val == pHead->next->val)
+				pHead = pHead->next;
+			return deleteDuplication(pHead->next);
+		}
+		else
+		{
+			pHead->next = deleteDuplication(pHead->next);
+			return pHead;
+		}
+	}
+};
+
+
 int main_offer18_2()
 {
 	ListNode* node1 = new ListNode(1);
