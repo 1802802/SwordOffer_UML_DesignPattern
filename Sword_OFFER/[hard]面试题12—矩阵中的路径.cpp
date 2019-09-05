@@ -137,6 +137,7 @@ private:
 				|| isHasPath(matrix, rows, cols, row, col + 1, str, pathLength, isVisited)
 				|| isHasPath(matrix, rows, cols, row + 1, col, str, pathLength, isVisited);
 			//4.如果在当前节点的所有试探中都没有找到符合条件的点，那么就进行回溯，路径后移，访问位赋false
+			//试探回溯法，无论最终的结果如何，都要进行回溯（由此可以找到多条路径），所以这里其实不用判断
 			if (!hasPath)
 			{
 				--pathLength;
