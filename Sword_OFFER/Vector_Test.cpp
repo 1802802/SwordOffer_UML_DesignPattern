@@ -23,6 +23,16 @@ public:
 	s() { cout << "main函数之前执行" << endl; }
 };
 
+void test_fun1()
+{
+	//函数中的静态成员变量在创建之后不会被小销毁，之后每次调用函数都会无视这个定义语句执行后面的操作
+	//往往用于记录上次运行此函数得到的值或者是记录运行次数之类的
+	static int temp_fun1 = 0;
+	temp_fun1++;
+	cout << "temp_fun1：" << temp_fun1 << endl;
+}
+
+
 //s sss;
 
 //使用C的定义方式可以实现某些函数在main函数之前与之后执行的情况
@@ -31,13 +41,14 @@ public:
 
 static int temp = 1;
 
-int main_vector_test()
+int main()
 {
 	cout << "main函数开始执行" << endl;
 	//_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
 	Vector<int> a(1, 0);
 	for (int i = 0; i < 5; i++)
 	{
+		test_fun1();
 		a.insert(0, 2);
 		a.insert(0, 6);
 		a.insert(0, 21);
@@ -89,6 +100,13 @@ int main_vector_test()
 	string bbb = "b";
 	string ccc = aaa + bbb;
 	cout << ccc << endl;
+
+	char* tmp1 = new char[10];
+	memset(tmp1, '0', 9);
+	cout << tmp1 << endl;
+	tmp1[2] = '2';
+	tmp1[9] = '\0';
+	cout << tmp1 << endl;
 
 	_CrtDumpMemoryLeaks();//注意这条语句的摆放位置，因为这会直接影响到你的判断结果
 

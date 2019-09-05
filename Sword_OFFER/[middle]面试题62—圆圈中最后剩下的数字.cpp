@@ -110,7 +110,7 @@ static void Test6()
 	Test("Test6", 4000, 997, 1027);
 }
 
-int main(int argc, char* argv[])
+int main_offer62(int argc, char* argv[])
 {
 	Test1();
 	Test2();

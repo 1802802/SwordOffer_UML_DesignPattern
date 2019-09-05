@@ -138,6 +138,50 @@ private:
 	priority_queue<double, vector<double>, intComp> rightHeap;
 };
 
+struct compareASC
+{
+	bool operator()(const int& l, const int& r) { return l < r; };
+};
+
+struct compareDESC
+{
+	bool operator()(const int& l, const int& r) { return l > r; };
+};
+
+class Solution_offer41
+{
+public:
+	//这个题主要就是左边的大顶堆与右边的小顶堆的一个配合，将数据的中位数隔在两个堆的堆顶之间
+	void Insert(int num)
+	{
+		if ((totalsum & 0x1) == 0)
+		{
+			rightheap.push(num);
+			leftheap.push(rightheap.top());
+			rightheap.pop();
+		}
+		else
+		{
+			leftheap.push(num);
+			rightheap.push(leftheap.top());
+			leftheap.pop();
+		}
+		totalsum++;
+	}
+
+	double GetMedian()
+	{
+		if ((totalsum & 0x1) == 0)
+			return (leftheap.top() + rightheap.top()) / 2.0;
+		else
+			return (double)leftheap.top();
+	}
+private:
+	int totalsum = 0;
+	priority_queue<int, vector<int>, compareASC> leftheap;
+	priority_queue<int, vector<int>, compareDESC> rightheap;
+};
+
 // ====================测试代码====================
 static void Test(char* testName, Solution& numbers, double expected)
 {
