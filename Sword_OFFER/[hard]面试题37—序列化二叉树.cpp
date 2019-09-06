@@ -92,6 +92,86 @@ public:
 	}
 };
 
+
+struct TreeNode 
+{
+	int val;
+	struct TreeNode *left;
+	struct TreeNode *right;
+	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution
+{
+public:
+	void travPre(TreeNode *root, string &save)
+	{
+		if (root == nullptr)
+		{
+			save.append("#!");
+			return;
+		}
+		save.append(to_string(root->val) + "!");
+		travPre(root->left, save);
+		travPre(root->right, save);
+	}
+
+	//序列化的核心在于：使用前序遍历建立，然后将建立的string变为char*类型（注意pop_back)
+	char* Serialize(TreeNode *root)
+	{
+		string save = "";
+		travPre(root, save);
+		save.pop_back();
+		char* tmp = new char[save.size()];
+		strcpy(tmp, save.c_str());
+		return tmp;
+	}
+
+	//反序列化的核心在于：对于char中递进的处理，对于单个前序遍历的重建方式（先左再右，引用传递start）
+	//这里利用了前序遍历根左右的特性，先左后必为右
+	TreeNode* Deserialize(char *str, int &start, int &end)
+	{
+		if (str[start] == '!')
+			start++;
+		if (start < end && str[start] != '#')
+		{
+			int val = 0; int minus = 1;
+			if (str[start] == '-')
+			{
+				minus = -1;
+				start++;
+			}
+			if (str[start] == '+')
+			{
+				minus = 1;
+				start++;
+			}
+			while (str[start] != '!')
+			{
+				val = 10 * val + minus*(str[start] - '0');
+				start++;
+			}
+			TreeNode* pNode = new TreeNode(val);
+			pNode->left = Deserialize(str, start, end);
+			pNode->right = Deserialize(str, start, end);
+			return pNode;
+		}
+		else
+		{
+			start++;
+			return nullptr;
+		}
+	}
+
+	TreeNode* Deserialize(char *str)
+	{
+		if (str == nullptr)
+			return nullptr;
+		int start = 0; int end = strlen(str);
+		return Deserialize(str, start, end);
+	}
+};
+
 // ==================== Test Code ====================
 bool isSameTree(const BinaryTreeNode* pRoot1, const BinaryTreeNode* pRoot2)
 {

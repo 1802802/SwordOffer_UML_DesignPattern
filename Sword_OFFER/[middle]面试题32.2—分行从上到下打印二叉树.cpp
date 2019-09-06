@@ -96,6 +96,39 @@ public:
 	}
 };
 
+//使用队列数组的方式可能更易懂且易写一些
+class Solution_offer32_2
+{
+public:
+	vector<vector<int> > Print(BinaryTreeNode* pRoot)
+	{
+		if (pRoot == nullptr)
+			return vector<vector<int> >();
+		queue<BinaryTreeNode*> save[2];
+		vector<vector<int> > out;
+		int index = 0;
+		save[index].push(pRoot);
+		while (!save[index].empty() || !save[1 - index].empty())
+		{
+			vector<int> temp(save[index].size());
+			int curplace = 0;
+			while (!save[index].empty())
+			{
+				BinaryTreeNode* pNode = save[index].front(); save[index].pop();
+				temp[curplace++] = pNode->m_nValue;
+				if (pNode->m_pLeft != nullptr)
+					save[1 - index].push(pNode->m_pLeft);
+				if (pNode->m_pRight != nullptr)
+					save[1 - index].push(pNode->m_pRight);
+			}
+			index = 1 - index;
+			out.push_back(temp);
+		}
+		return out;
+	}
+
+};
+
 // ====================测试代码====================
 static void Test(char* testName, BinaryTreeNode* pRoot)
 {

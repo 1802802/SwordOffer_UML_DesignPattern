@@ -101,6 +101,27 @@ int maxProductAfterCutting_solution3(int length)
 	return pow(3, cut_three)*pow(2, cut_two);
 }
 
+int cutRope(int number)
+{
+	if (number < 2)
+		return 0;
+	if (number == 2)
+		return 1;
+	if (number == 3)
+		return 2;
+	if (number == 4)
+		return 4;
+	//尽可能地去剪成3，而剪成2的条数要么是1，要么是剪到1后回4变成2
+	int three_times = number / 3;
+	int two_times = 1;
+	if (number - 3 * three_times == 1)
+	{
+		three_times--;
+		two_times++;
+	}
+	return pow(2, two_times)*pow(3, three_times);
+}
+
 // ====================测试代码====================
 static void test(const char* testName, int length, int expected)
 {
