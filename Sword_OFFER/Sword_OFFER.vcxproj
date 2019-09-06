@@ -144,6 +144,9 @@
     <ClCompile Include="字节跳动2020笔试题2.cpp" />
     <ClCompile Include="字节跳动2020笔试题3.cpp" />
     <ClCompile Include="字节跳动2020笔试题4.cpp" />
+    <ClCompile Include="小米2020校招笔试题1.cpp" />
+    <ClCompile Include="小米2020校招笔试题2.cpp" />
+    <ClCompile Include="小米2020校招笔试题3.cpp" />
     <ClCompile Include="拼多多2020校招第1题.cpp" />
     <ClCompile Include="拼多多2020校招第2题.cpp" />
     <ClCompile Include="拼多多2020校招第3题.cpp" />
