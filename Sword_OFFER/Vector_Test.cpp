@@ -41,7 +41,23 @@ void test_fun1()
 
 static int temp = 1;
 
-int main()
+class parafile
+{
+public:
+	virtual void fun1() = 0;
+	virtual void fun2() = 0;
+};
+
+class xmlparafile : public parafile
+{
+public:
+	void fun1() { cout << 1 << endl; }
+	void fun2() { cout << m_index << endl; }
+private:
+	int m_index = 1;
+};
+
+int main_vector_test()
 {
 	cout << "main函数开始执行" << endl;
 	//_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
@@ -107,6 +123,9 @@ int main()
 	tmp1[2] = '2';
 	tmp1[9] = '\0';
 	cout << tmp1 << endl;
+
+	parafile* tmp2 = new xmlparafile();
+	tmp2->fun2();
 
 	_CrtDumpMemoryLeaks();//注意这条语句的摆放位置，因为这会直接影响到你的判断结果
 

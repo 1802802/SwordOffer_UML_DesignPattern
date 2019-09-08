@@ -157,6 +157,7 @@
     <ClCompile Include="拼多多面试题2—种树.cpp" />
     <ClCompile Include="拼多多面试题3—两两配对差值最小.cpp" />
     <ClCompile Include="拼多多面试题4—回合制游戏.cpp" />
+    <ClCompile Include="海康威视2020笔试1.cpp" />
     <ClCompile Include="环形队列实现cpp.cpp" />
     <ClCompile Include="第14题 最长公共前缀.cpp" />
     <ClCompile Include="第207题 课程表（拓扑排序）.cpp" />

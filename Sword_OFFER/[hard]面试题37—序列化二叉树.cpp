@@ -101,7 +101,7 @@ struct TreeNode
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-class Solution
+class Solution_offer37
 {
 public:
 	void travPre(TreeNode *root, string &save)
@@ -123,7 +123,7 @@ public:
 		travPre(root, save);
 		save.pop_back();
 		char* tmp = new char[save.size()];
-		strcpy(tmp, save.c_str());
+		//strcpy(tmp, save.c_str());
 		return tmp;
 	}
 
