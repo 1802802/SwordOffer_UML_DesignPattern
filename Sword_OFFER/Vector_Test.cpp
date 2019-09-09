@@ -32,6 +32,11 @@ void test_fun1()
 	cout << "temp_fun1：" << temp_fun1 << endl;
 }
 
+struct testfortem
+{
+	int a;
+};
+
 
 //s sss;
 
@@ -57,8 +62,16 @@ private:
 	int m_index = 1;
 };
 
-int main_vector_test()
+template<typename T, class A> void fun_test()
 {
+	T a;
+	cout << sizeof(a) << endl;
+}
+
+int main()
+{
+	fun_test<testfortem, xmlparafile>();
+
 	cout << "main函数开始执行" << endl;
 	//_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
 	Vector<int> a(1, 0);

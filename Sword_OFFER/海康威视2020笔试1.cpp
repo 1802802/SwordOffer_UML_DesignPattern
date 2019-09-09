@@ -5,7 +5,7 @@
 #include <sstream>
 using namespace std;
 
-int main()
+int main_hkws111()
 {
 	return 0;
 }
