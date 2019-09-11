@@ -74,6 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,6 +125,9 @@
     <ClCompile Include="Tree.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Vector_Test.cpp" />
+    <ClCompile Include="VIVO校招2020笔试题1.cpp" />
+    <ClCompile Include="VIVO校招2020笔试题2.cpp" />
+    <ClCompile Include="VIVO校招2020笔试题3.cpp" />
     <ClCompile Include="中兴笔试第二题.cpp" />
     <ClCompile Include="京东2020面试题1.cpp" />
     <ClCompile Include="京东2020面试题2.cpp" />

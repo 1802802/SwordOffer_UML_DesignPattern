@@ -137,6 +137,19 @@ int main()
 	tmp1[9] = '\0';
 	cout << tmp1 << endl;
 
+	char* s_test = "1234562ed";
+	char sa_test[] = "afsdggsd";
+	//sa_test = s_test;  //数组名被看成常量，不能直接赋值
+
+	//char a1 = 'aaaa';
+	//char *str = &a1;
+	//strcpy(str, "a");
+	//printf("%s", str);
+
+	//char *str = "abcde";
+	////str[0] = 'x';
+	//printf("%s", str);
+
 	parafile* tmp2 = new xmlparafile();
 	tmp2->fun2();
 

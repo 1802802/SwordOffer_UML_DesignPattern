@@ -486,6 +486,15 @@
     <ClCompile Include="海康威视2020笔试1.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
+    <ClCompile Include="VIVO校招2020笔试题1.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="VIVO校招2020笔试题2.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="VIVO校招2020笔试题3.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

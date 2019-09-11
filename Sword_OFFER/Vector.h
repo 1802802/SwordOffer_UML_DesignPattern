@@ -482,14 +482,14 @@ template<typename T> void Vector<T>::heapsort(int lo, int hi)
 {
 	//默认当前数组为树结构的层次遍历序列，从所有的非叶节点进行操作（前size/2 - 1均为非叶节点）
 	for (int i = ((hi - lo) >> 1) - 1; i >= lo; --i)    //建堆，floyid建堆法，即自下而上地下滤每个节点。从size的中部选值，保持所取值都是有孩子的节点，避免无关计算
-		moveDown(i, hi - lo - 1);
+		moveDown(i, hi - 1);
 
 	cout << "建堆后数组为：   ";
 	for (int i = lo; i < hi - lo; i++)
 		cout << _elem[i] << " ";
 	cout << endl;
 
-	for (int i = hi - lo - 1; i >= lo + 1; --i)        //开始实质的堆排序，即不断地将data[0]（当前的最大数）交换到数组的区间末尾
+	for (int i = hi - 1; i >= lo + 1; --i)        //开始实质的堆排序，即不断地将data[0]（当前的最大数）交换到数组的区间末尾
 	{
 		swap(_elem[lo], _elem[i]);
 		moveDown(lo, i - 1);			   //通过每次交换之后的下滤，保证数组的首元素一直都是最大值
