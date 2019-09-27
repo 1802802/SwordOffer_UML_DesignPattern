@@ -140,6 +140,7 @@
     <ClCompile Include="京东2020面试题2.cpp" />
     <ClCompile Include="京东2020面试题3.cpp" />
     <ClCompile Include="京东2020面试题4.cpp" />
+    <ClCompile Include="从大数跑小数.cpp" />
     <ClCompile Include="优必选2020校招第一题.cpp" />
     <ClCompile Include="优必选2020校招第三题.cpp" />
     <ClCompile Include="优必选2020校招第二题.cpp" />
@@ -147,6 +148,7 @@
     <ClCompile Include="前n位依次被n整除.cpp" />
     <ClCompile Include="华为2020武研所优招现场二面笔试题.cpp" />
     <ClCompile Include="回文字符串判断.cpp" />
+    <ClCompile Include="圣斗士寻路战斗HP最小值.cpp" />
     <ClCompile Include="大数相加探讨.cpp" />
     <ClCompile Include="大疆2020笔试题1.cpp" />
     <ClCompile Include="大疆2020笔试题2.cpp" />
@@ -181,6 +183,7 @@
     <ClCompile Include="第73题 矩阵置零.cpp" />
     <ClCompile Include="第7题 整数反转.cpp" />
     <ClCompile Include="第XXX题 删除链表的倒数第N个节点.cpp" />
+    <ClCompile Include="线上跑点.cpp" />
     <ClCompile Include="给定数字的全排列问题.cpp" />
     <ClCompile Include="斐波拉切数列实现.cpp" />
     <ClCompile Include="杨辉三角形的取值.cpp" />

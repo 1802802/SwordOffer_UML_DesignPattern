@@ -23,7 +23,7 @@ size_t strlcpy(char *dst, const char *src, size_t siz)
 	{
 		do 
 		{
-			if ((*d++ = *s++) == 0)
+			if ((*d++ = *s++) == '\0')
 				break;
 		} while (--n != 0);
 	}
@@ -39,11 +39,38 @@ size_t strlcpy(char *dst, const char *src, size_t siz)
 	return(s - src - 1);    /* count does not include NUL 返回的数值为s中被遍历的长度，而不是根据siz真正cpy的数值*/
 }
 
+size_t strlcpy2(char *dst, const char *src, size_t siz)
+{
+	register char *d = dst;
+	register const char *s = src;
+	register size_t n = siz;
+
+	if (s == 0 || d == 0)
+		return 0;
+
+	while (n > 1)
+	{
+		if ((*d++ = *s++) == '\0')
+			break;
+		n--;
+	}
+
+	if (n == 1 || n == 0)
+	{
+		if (siz != 0)
+			*d = '\0';
+		while (*s++ != '\0');
+	}
+
+	return(s - src - 1);    /* count does not include NUL 返回的数值为s中被遍历的长度，而不是根据siz真正cpy的数值*/
+}
+
 int main_strlcpy()
 {
-	size_t siz = 10;
-	char dst[10];
-	const char *src = "abcdedfqweda";
+	
+	char dst[20] = { '0' };
+	const char *src = "abcde";
+	size_t siz = 0;
 	cout << strlcpy(dst, src, siz) << endl;
 	for (int i = 0; i < siz; i++)
 	{

@@ -6,7 +6,7 @@
 #include <sstream>
 using namespace std;
 
-int main()
+int main_tencent3()
 {
 	int n, m, x1, x2, y1, y2;
 	int ui, li, xi, yi;

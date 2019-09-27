@@ -6,7 +6,7 @@
 2.入队操作: data[rear] = x; rear = (rear+1)%maxn;
 
 总体思想就是不让rear和front的值超过maxn的大小。于是就在rear和front自增时候模maxn。
-注意！！：空队时rear等于front，满队时必须空一个位置。但是size就是size，说存3个就是存3个
+注意！！：空队时rear等于front，满队时必须空一个位置。即size只能存size - 1
 */
 
 #include <iostream>
@@ -61,8 +61,9 @@ public:
 		{
 			throw new exception("当前环形队列为空，不允许继续pop");
 		}
-		while (m_front != m_rear)
-			m_front = (m_front + 1) % m_size;
+		//while (m_front != m_rear)
+		//	m_front = (m_front + 1) % m_size;
+		m_rear = m_front;
 	}
 	T top()
 	{
@@ -99,6 +100,15 @@ int main_circlequeue()
 	q.push(5);
 	q.push(5);
 	q.popall();
+	q.push(1);
+	q.push(2);
+	q.push(3);
+	cout << q.top() << endl;
+	q.pop();
+	cout << q.top() << endl;
+	q.pop();
+	cout << q.top() << endl;
+	q.pop();
 	//cout << q.top() << endl;
 	//q.pop();
 

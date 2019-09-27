@@ -540,6 +540,15 @@
     <ClCompile Include="腾讯2020笔试题5.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
+    <ClCompile Include="线上跑点.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="圣斗士寻路战斗HP最小值.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="从大数跑小数.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">
