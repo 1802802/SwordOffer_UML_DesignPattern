@@ -74,7 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,7 +119,14 @@
   <ItemGroup>
     <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="List.cpp" />
+    <ClCompile Include="NVDIA校招2020笔试题1.cpp" />
+    <ClCompile Include="NVDIA校招2020笔试题2.cpp" />
+    <ClCompile Include="NVDIA校招2020笔试题3.cpp" />
+    <ClCompile Include="NVDIA校招2020笔试题4.cpp" />
+    <ClCompile Include="NVDIA校招2020笔试题5.cpp" />
     <ClCompile Include="shared_ptr_test.cpp" />
+    <ClCompile Include="socket客户端.cpp" />
+    <ClCompile Include="socket服务器.cpp" />
     <ClCompile Include="strlcpy实现.cpp" />
     <ClCompile Include="Timer函数调用类测试.cpp" />
     <ClCompile Include="Tree.cpp" />
@@ -161,8 +168,11 @@
     <ClCompile Include="拼多多面试题2—种树.cpp" />
     <ClCompile Include="拼多多面试题3—两两配对差值最小.cpp" />
     <ClCompile Include="拼多多面试题4—回合制游戏.cpp" />
+    <ClCompile Include="构造函数手写复习.cpp" />
     <ClCompile Include="海康威视2020笔试1.cpp" />
     <ClCompile Include="环形队列实现cpp.cpp" />
+    <ClCompile Include="科大讯飞校招2020题1.cpp" />
+    <ClCompile Include="科大讯飞校招2020题2.cpp" />
     <ClCompile Include="第14题 最长公共前缀.cpp" />
     <ClCompile Include="第207题 课程表（拓扑排序）.cpp" />
     <ClCompile Include="第210题 课程表 II（拓扑排序）.cpp" />
@@ -178,6 +188,11 @@
     <ClCompile Include="网易互娱2020笔试题2.cpp" />
     <ClCompile Include="网易互娱2020笔试题3.cpp" />
     <ClCompile Include="网易互娱2020笔试题4.cpp" />
+    <ClCompile Include="腾讯2020笔试题1.cpp" />
+    <ClCompile Include="腾讯2020笔试题2.cpp" />
+    <ClCompile Include="腾讯2020笔试题3.cpp" />
+    <ClCompile Include="腾讯2020笔试题4.cpp" />
+    <ClCompile Include="腾讯2020笔试题5.cpp" />
     <ClCompile Include="自主面试题1—N个数的全排列.cpp" />
     <ClCompile Include="自主面试题2—二叉排序树的恢复.cpp" />
     <ClCompile Include="自主面试题3—从1-N的数字里选出M个数字组成一个数组.cpp" />

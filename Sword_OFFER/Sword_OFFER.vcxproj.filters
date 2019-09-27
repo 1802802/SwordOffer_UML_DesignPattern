@@ -495,6 +495,51 @@
     <ClCompile Include="VIVO校招2020笔试题3.cpp">
       <Filter>源文件\各种自主面试题</Filter>
     </ClCompile>
+    <ClCompile Include="科大讯飞校招2020题1.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="科大讯飞校招2020题2.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="socket服务器.cpp">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClCompile>
+    <ClCompile Include="socket客户端.cpp">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClCompile>
+    <ClCompile Include="NVDIA校招2020笔试题1.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="NVDIA校招2020笔试题2.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="NVDIA校招2020笔试题3.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="NVDIA校招2020笔试题4.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="NVDIA校招2020笔试题5.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="构造函数手写复习.cpp">
+      <Filter>源文件\数据结构代码</Filter>
+    </ClCompile>
+    <ClCompile Include="腾讯2020笔试题1.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="腾讯2020笔试题2.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="腾讯2020笔试题3.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="腾讯2020笔试题4.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
+    <ClCompile Include="腾讯2020笔试题5.cpp">
+      <Filter>源文件\各种自主面试题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h">

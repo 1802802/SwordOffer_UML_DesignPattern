@@ -1,3 +1,8 @@
+//#define new new(__FILE__, __LINE__)    
+/*宏定义,把new替换成我们定义的
+operator new (size_t size,char *m_file,int m_line)函数
+用到了__FILE__,__LINE__宏来获取当前文件名和当前行数*/
+
 #include <iostream>
 #include <list>
 #include <string>
@@ -59,6 +64,7 @@ public:
 	void fun1() { cout << 1 << endl; }
 	void fun2() { cout << m_index << endl; }
 private:
+	virtual void fun3() {}
 	int m_index = 1;
 };
 
@@ -68,11 +74,14 @@ template<typename T, class A> void fun_test()
 	cout << sizeof(a) << endl;
 }
 
-int main()
+int main_vectortest()
 {
+	cout << "main函数开始执行" << endl;
 	fun_test<testfortem, xmlparafile>();
 
-	cout << "main函数开始执行" << endl;
+	cout << __FILE__ << endl;
+	cout << __LINE__ << endl;
+	
 	//_CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
 	Vector<int> a(1, 0);
 	for (int i = 0; i < 5; i++)
@@ -149,6 +158,17 @@ int main()
 	//char *str = "abcde";
 	////str[0] = 'x';
 	//printf("%s", str);
+
+	vector<int> vec_temp1(100, 0);
+	for (vector<int>::iterator beg = vec_temp1.begin(); beg < vec_temp1.end(); )
+	{
+		if (*beg == 0)
+			beg = vec_temp1.erase(beg);
+		else
+			beg++;
+	}
+	cout << "sizeof(vec_temp1):" << sizeof(vec_temp1) << endl;
+	cout << "sizeof(vector<int>):" << sizeof(vector<int>) << endl;
 
 	parafile* tmp2 = new xmlparafile();
 	tmp2->fun2();
